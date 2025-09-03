@@ -1,3 +1,10 @@
-import DesignSection from './components/DesignSection.js';
-
-customElements.define('design-section', DesignSection);
+import '../components/DesignSection.js';
+import '../components/TypographyScale.js';
+import '../components/LayoutPrinciple.js';
+import '../components/ColorSwatch.js';
+import '../components/IconDisplay.js';
+import '../components/UserFeedbackMessage.js';
+import '../components/PrimaryTabs.js';
+import '../components/PillButton.js';
+import '../components/CircularSpinner.js';
+import '../components/LinearLoader.js';
