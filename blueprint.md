@@ -23,6 +23,9 @@ A arquitetura final será baseada nos seguintes princípios:
 *   **`<user-feedback-message>`**: Exibe uma mensagem de feedback ao usuário (success, error, warning, info) com ícone e cor correspondentes.
 *   **`<primary-tabs>`**: Renderiza uma barra de navegação com abas para seções principais.
 *   **`<pill-button>`**: Exibe um botão de filtro em formato de pílula com estados de `active` e `disabled`.
+*   **`<circular-spinner>`**: Exibe um spinner de carregamento circular com diferentes tamanhos e cores.
+*   **`<linear-loader>`**: Exibe uma barra de progresso linear, com suporte para os modos `determinate` e `indeterminate`.
+*   **`<content-card>`**: Renderiza um card versátil com suporte para múltiplos tipos (standard, informative, interactive, media) e conteúdo de ações customizável via slot.
 
 ## Plano de Refatoração (Checklist)
 
@@ -39,8 +42,10 @@ A arquitetura final será baseada nos seguintes princípios:
 *   [✅] Refatorar a seção **"Iconography"** com `<icon-display>`.
 *   [✅] Refatorar a seção **"User Feedback"** com `<user-feedback-message>`.
 *   [✅] Refatorar a seção **"Tabs & Selectors"** com `<primary-tabs>` e `<pill-button>`.
-*   [🔲] **(Próximo)** Refatorar a seção **"Loaders & Spinners"**.
-*   [🔲] Refatorar a seção **"Cards & Content Layouts"**.
-*   [🔲] Refatorar a seção **"Badges & Tags"**.
+*   [✅] Refatorar a seção **"Loaders & Spinners"** com `<circular-spinner>` e `<linear-loader>`.
+*   [🔲] Refatorar a seção **"Cards & Content Layouts"** com `<content-card>`.
+*   [🔲] **(Próximo)** Refatorar a seção **"Badges & Tags"**.
+*   [🔲] Refatorar a seção **"Data Tables"**.
+*   [🔲] Refatorar a seção **"Modals & Pop-ups"**.
 *   [🔲] Refatorar a seção **"Buttons"** (agrupada dentro de "Components").
 *   ... e assim por diante.

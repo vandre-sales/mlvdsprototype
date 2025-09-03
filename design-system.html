@@ -318,6 +318,34 @@
           </div>
         </div>
       </div>
+      <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-3">
+        <div class="md:col-span-1">
+          <h3 class="text-lg font-bold text-[var(--color-white)]">Contextual Usage</h3>
+          <p class="mt-1 text-sm text-[var(--color-blue-light)]">Apply loaders and spinners in context to provide clear feedback on the status of a process.</p>
+        </div>
+        <div class="grid w-full grid-cols-1 gap-8 rounded-lg bg-[var(--color-background)] p-8 md:col-span-2 lg:grid-cols-2">
+          <div class="flex flex-col items-center justify-center gap-4 rounded-lg border border-[var(--color-blue-enterprise)] p-6 text-center">
+            <circular-spinner size="medium"></circular-spinner>
+            <h4 class="font-semibold text-white">Page Loading</h4>
+            <p class="text-xs text-[var(--color-blue-light)]/80">Use a centered spinner for initial page loads.</p>
+          </div>
+          <div class="flex flex-col items-center justify-center gap-4 rounded-lg border border-[var(--color-blue-enterprise)] p-6 text-center">
+            <button class="flex h-[48px] w-40 items-center justify-center rounded-lg bg-[var(--color-blue-standard)] text-base font-bold text-white" disabled="">
+              <circular-spinner size="small" color="var(--color-white)"></circular-spinner>
+            </button>
+            <h4 class="font-semibold text-white">Form Submission</h4>
+            <p class="text-xs text-[var(--color-blue-light)]/80">Indicate processing within a button.</p>
+          </div>
+          <div class="relative flex min-h-[150px] w-full flex-col items-center justify-center gap-4 rounded-lg border border-[var(--color-blue-enterprise)] p-6 text-center lg:col-span-2">
+            <div class="absolute inset-0 z-10 flex flex-col items-center justify-center rounded-lg bg-black/50 backdrop-blur-sm">
+              <circular-spinner size="medium" color="var(--color-blue-light)"></circular-spinner>
+              <p class="mt-2 text-sm text-white">Updating...</p>
+            </div>
+            <h4 class="font-semibold text-white">Content Update</h4>
+            <p class="text-[var(--color-blue-light)]/80">Overlay a section to show content is refreshing.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </design-section>
 

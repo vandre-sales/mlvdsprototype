@@ -8,3 +8,4 @@ import '../components/PrimaryTabs.js';
 import '../components/PillButton.js';
 import '../components/CircularSpinner.js';
 import '../components/LinearLoader.js';
+import '../components/ContentCard.js';
