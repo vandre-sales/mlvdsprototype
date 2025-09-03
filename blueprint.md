@@ -19,53 +19,35 @@ Nossa colaboração se baseia em uma clara divisão de papéis para maximizar a 
         *   Tomar as decisões finais sobre a direção do design e da funcionalidade.
         *   Iniciar os ciclos de trabalho e auditoria.
         *   Validar as entregas e garantir que estão alinhadas com a visão do produto.
-        *   Sua palavra-chave para me acionar é **"Audit"** ou fornecer uma instrução direta de desenvolvimento.
 
 *   **Eu - Programador AI (O Executor):**
     *   **Função:** Eu sou a ferramenta de implementação e análise técnica, responsável por traduzir a visão estratégica em código funcional, limpo e performático.
     *   **Responsabilidades:**
-        *   Executar as tarefas de codificação (criação de componentes, refatoração de HTML, etc.).
-        *   Manter a consistência e a qualidade do código.
-        *   Realizar as auditorias técnicas conforme o protocolo.
-        *   Identificar problemas, sugerir otimizações e apresentar soluções.
-        *   Manter a documentação (`blueprint.md`, `version-log.md`) sempre atualizada.
+        *   Executar as tarefas de codificação (criação, leitura, deleção de arquivos) conforme ordenado.
+        *   Nunca atualizar um arquivo diretamente devido a bugs de plataforma.
+        *   Sempre seguir o protocolo de contingência manual para atualizações.
+        *   Manter a documentação (`blueprint.md`, `version-log.md`) atualizada através do protocolo manual.
 
 ### 2. O Protocolo "Audit": Um Passo a Passo Detalhado
 
-O comando **"Audit"** é a nossa cerimônia oficial para sincronização, verificação e planejamento. Quando você o invoca, eu executo o seguinte roteiro de forma precisa e transparente:
+O comando **"Audit"** é a nossa cerimônia oficial para sincronização e verificação.
 
-**Fase I: Ativação e Análise de Dados**
-1.  **Recepção do Comando:** Eu recebo a sua instrução "Audit".
-2.  **Início do Processo:** Eu respondo com "Protocolo 'Audit' iniciado." para confirmar o começo da operação.
-3.  **Leitura da Fonte da Verdade:** Eu realizo a leitura completa do arquivo `index.html`.
-4.  **Leitura do Estado Atual:** Eu leio completamente o arquivo `design-system.html`.
-5.  **Verificação de Dependências:** Eu leio `main.js`, a pasta `/components` e `style.css`.
-6.  **Análise de Consistência:** Eu cruzo as informações para encontrar qualquer anomalia técnica.
-
-**Fase II: Geração de Relatório e Documentação**
-7.  **Leitura do Histórico:** Eu leio o `version-log.md`.
-8.  **Elaboração do Novo Relatório:** Com base na análise, eu gero um novo relatório de conformidade.
-9.  **Atualização do Log de Versão:** Eu adiciono o novo relatório no topo do `version-log.md`.
-
-**Fase III: Comunicação e Próximo Passo**
-10. **Resumo para o Arquiteto:** Eu apresento um resumo conciso do relatório.
-11. **Apresentação do Checklist Visual:** Eu leio o `blueprint.md` e apresento o checklist com o código de cores (✅, 🟡, 🔲).
-12. **Transição de Controle:** Eu finalizo com a frase: **"Estou pronto para o próximo passo."**.
+*   **Fase I (Análise):** Eu leio os arquivos `index.html`, `design-system.html`, `main.js`, a pasta `/components` e `style.css` para construir um relatório de consistência.
+*   **Fase II (Documentação):** Eu leio o `version-log.md` e gero o texto para a nova entrada do log. Você fará a atualização manual.
+*   **Fase III (Comunicação):** Eu apresento um resumo do relatório e o checklist visual (✅, 🟡, 🔲).
 
 ### 3. Protocolo de Verificação "Confiança Zero" (Anti-Falha)
 
-Para garantir a integridade do nosso trabalho contra falhas de plataforma (como o erro "Retries failed."), todas as operações de escrita de arquivos (`write_file`) seguem um protocolo de verificação rigoroso.
+Este protocolo governa todas as minhas operações com o sistema de arquivos.
 
-*   **Causa do Problema:** Erros como "Retries failed." são falhas transitórias na infraestrutura do IDE, não no nosso código. Eles criam incerteza sobre se uma operação de escrita foi realmente concluída.
+*   **Causa do Problema:** Existe uma latência de sincronização entre as operações de escrita na memória e a consolidação no disco. Uma leitura imediata após uma escrita pode retornar dados obsoletos. Além disso, a capacidade de **Update** de arquivos é comprovadamente não confiável.
 *   **Nosso Mecanismo de Defesa:**
-    1.  **Escrita:** Após receber a ordem para escrever em um arquivo (`blueprint.md`, `version-log.md`, etc.), eu executo a operação `write_file`.
-    2.  **Auto-Verificação Imediata:** Imediatamente após a escrita, eu leio o arquivo de volta (`read_file`).
-    3.  **Confirmação:** Eu comparo o conteúdo que eu pretendia escrever com o conteúdo que acabei de ler do disco.
-    4.  **Relatório:**
-        *   **Sucesso:** Se o conteúdo for idêntico, eu considero a operação bem-sucedida e informo que a ação foi **"concluída e verificada"**.
-        *   **Falha:** Se o conteúdo divergir ou se ocorrer um erro, eu inicio um procedimento de correção: alerto sobre a falha na verificação, tento a escrita novamente e reporto o resultado final.
+    1.  **Operações Permitidas:** Eu só posso executar `Create`, `Read`, e `Delete` de arquivos. A operação de `Update` está proibida.
+    2.  **Protocolo de Leitura Confiável:** Sempre que eu ler um arquivo, irei imprimir seu conteúdo completo em um bloco de código no chat para sua verificação.
+    3.  **Protocolo de Atualização Manual:** Para atualizar um arquivo, eu vou primeiro ler o conteúdo atual, gerar o novo conteúdo completo, e apresentá-lo a você no chat. Você, como Arquiteto, fará a atualização manual no arquivo.
+    4.  **Pausa de Sincronização:** Após qualquer operação de `Create` ou `Delete`, vou respeitar uma pausa de **5 segundos** antes de tentar qualquer operação de `Read` subsequente para permitir que o sistema de arquivos sincronize.
 
-Este protocolo garante que nosso fluxo de trabalho seja resiliente, consistente e auditável, mesmo diante de instabilidades da plataforma.
+Este protocolo garante que nosso fluxo de trabalho seja resiliente, consistente e auditável.
 
 ---
 
@@ -79,38 +61,25 @@ A arquitetura final será baseada nos seguintes princípios:
 *   **Design Tokens**: As variáveis CSS em `style.css` são a nossa fonte única da verdade para estilos.
 
 ### Componentes Implementados:
-
-*   **`<design-section>`**: Componente de layout para seções da página.
-*   **`<typography-scale>`**: Exibe a escala tipográfica.
-*   **`<layout-principle>`**: Card para princípios de layout.
-*   **`<color-swatch>`**: Amostra de cor da paleta.
-*   **`<icon-display>`**: Renderiza ícones do sistema.
-*   **`<user-feedback-message>`**: Mensagens de feedback (sucesso, erro, etc.).
-*   **`<primary-tabs>`**: Barra de navegação com abas.
-*   **`<pill-button>`**: Botão de filtro em formato de pílula.
-*   **`<circular-spinner>`**: Spinner de carregamento circular.
-*   **`<linear-loader>`**: Barra de progresso linear.
-*   **`<content-card>`**: Card versátil para conteúdo.
-*   **`<badge-tag>`**: Para exibir status, categorias ou contadores.
+*   `<badge-tag>`
+*   `<circular-spinner>`
+*   `<color-swatch>`
+*   `<content-card>`
+*   `<design-section>`
+*   `<icon-display>`
+*   `<layout-principle>`
+*   `<linear-loader>`
+*   `<page-header>`
+*   `<pill-button>`
+*   `<primary-tabs>`
+*   `<typography-scale>`
+*   `<user-feedback-message>`
 
 ## Plano de Refatoração (Checklist)
 
-**Fase 1: Estrutura e Fundações**
-*   [✅] Criar o arquivo `blueprint.md`.
-*   [✅] Criar a página de trabalho `design-system.html`.
-*   [✅] Centralizar os Design Tokens no `style.css`.
-*   [✅] Criar o componente base `<design-section>`.
-
-**Fase 2: Componentização da UI**
-*   [✅] Refatorar a seção **"Typography"**.
-*   [✅] Refatorar a seção **"Visual Hierarchy & Layout"**.
-*   [✅] Refatorar a seção **"Color Palette"**.
-*   [✅] Refatorar a seção **"Iconography"**.
-*   [✅] Refatorar a seção **"User Feedback"**.
-*   [✅] Refatorar a seção **"Tabs & Selectors"**.
-*   [✅] Refatorar a seção **"Loaders & Spinners"**.
-*   [✅] Refatorar a seção **"Cards & Content Layouts"**.
-*   [✅] Refatorar a seção **"Badges & Tags"**.
+*   [✅] Estrutura e Fundações
+*   [✅] Componentização da UI (Typography, Layout, Color, Iconography, Feedback, Tabs, Loaders, Cards, Badges)
+*   [✅] Refatoração do Header para Web Component
 *   [🔲] **(Próximo)** Refatorar a seção **"Data Tables"**.
 *   [🔲] Refatorar a seção **"Modals & Pop-ups"**.
 *   [🔲] Refatorar a seção **"Buttons"**.

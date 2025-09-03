@@ -1,0 +1,17 @@
+/* styles/page.css - Estilos para o layout principal da página */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 3rem 10rem; /* py-12 px-40 */
+}
+
+.main-container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}

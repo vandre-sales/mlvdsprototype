@@ -10,3 +10,4 @@ import '../components/CircularSpinner.js';
 import '../components/LinearLoader.js';
 import '../components/ContentCard.js';
 import '../components/BadgeTag.js';
+import '../components/PageHeader.js';
