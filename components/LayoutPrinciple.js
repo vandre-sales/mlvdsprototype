@@ -11,16 +11,12 @@ class LayoutPrinciple extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
       <style>
-        @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
-        @import url('https://cdn.tailwindcss.com?plugins=forms,container-queries');
-        :host {
-          display: block;
-        }
         .card {
           border-radius: 0.5rem;
           border: 1px solid var(--color-blue-enterprise);
           background-color: var(--color-blue-dark);
           padding: 1.5rem;
+          height: 100%;
         }
         .icon {
           font-size: 2rem;

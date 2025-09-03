@@ -9,3 +9,4 @@ import '../components/PillButton.js';
 import '../components/CircularSpinner.js';
 import '../components/LinearLoader.js';
 import '../components/ContentCard.js';
+import '../components/BadgeTag.js';

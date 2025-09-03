@@ -13,7 +13,6 @@ class ContentCard extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
       <style>
-        @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
         :host {
           display: flex;
           flex-direction: column;
@@ -116,7 +115,7 @@ class ContentCard extends HTMLElement {
 
     const slot = this.shadowRoot.querySelector('slot[name="actions"]');
     const actionsContainer = this.shadowRoot.querySelector('.actions-container');
-    if (!slot.assignedNodes().length) {
+    if (slot && !slot.assignedNodes().length) {
         actionsContainer.style.display = 'none';
     }
   }
