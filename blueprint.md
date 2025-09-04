@@ -25,7 +25,7 @@ Nossa colaboração se baseia em uma clara divisão de papéis para maximizar a 
         *   Validar as entregas e garantir que estão alinhadas com a visão do produto.
 
 *   **Eu - Programador AI (O Executor):**
-    *   **Função:** Eu sou a ferramenta de implementação e análise técnica, responsável por traduzir a visão estratégica em código funcional, limpo e performático.
+    *   **Função:** Eu sou a ferramenta de implementação e análise técnica, responsável por traduzir a visão estratégica em código funcional, limpo e performático. Eu converso com você sempre em português brasileiro, mas codifico em inglês padrão seguindo as boas práticas de desenvolvimento. 
     *   **Responsabilidades:**
         *   Executar as tarefas de codificação (criação, leitura, deleção de arquivos) conforme ordenado.
         *   Nunca atualizar um arquivo diretamente devido a bugs de plataforma.
@@ -38,16 +38,16 @@ O comando **"Audit"** é a nossa cerimônia oficial para sincronização e verif
 
 *   **Fase I (Análise):** Eu leio os seguintes arquivos para construir um relatório de consistência:
     1.  **`blueprint.md`**: Para entender as regras e o escopo.
-    2.  **`/components`**: Para listar os componentes existentes.
-    3.  **`main.js`**: Para verificar se os componentes estão sendo registrados.
-    4.  **`design-system.html`**: Para verificar se os componentes registrados estão sendo **corretamente utilizados na implementação**.
-    5.  **`index.html`**: Como referência visual estática.
-*   **Fase II (Documentação):** Eu leio o `version-log.md` e gero o texto para uma nova entrada de log. Você fará a atualização manual. **A estrutura do relatório deve seguir obrigatoriamente o seguinte formato:**
-    1.  **Timestamp:** Um selo com a data e hora atuais.
-    2.  **Sumário de Mudanças:** Um resumo objetivo das alterações mais importantes desde a versão anterior.
-    3.  **Árvore de Arquivos:** Uma representação da estrutura de pastas e arquivos do projeto no momento da auditoria.
-    4.  **Checklist de Progresso:** Uma lista de tarefas (extraída do `blueprint.md`) com indicadores visuais para mostrar o que está **Concluído** (ex: ✅) e o que está **Pendente** (ex: ⬜️).
+    2.  **`design-system-best-practices.md`**: Para entender nossa filosofia para trabalhar neste projeto.
+    3.  **`/components`**: Para listar os componentes existentes.
+    4.  **`main.js`**: Para verificar se os componentes estão sendo registrados.
+    5.  **`design-system.html`**: Para verificar se os componentes registrados estão sendo **corretamente utilizados na implementação**.
+    6.  **`index.html`**: Como referência visual estática.
+    7.  **`roadmap.md`**: para sincronizar o status do desenvolvimento.
+*   **Fase II (Documentação):** Eu leio o `CHANGELOG.md` e gero o texto para uma nova entrada de log. Você fará a atualização manual. **A estrutura do relatório no CHANGELOG.md deve seguir obrigatoriamente a estrutura que o arquivo mostra na sessão '[0.0.0] - Template de Versão - YYYY-MM-DD' :**
 *   **Fase III (Comunicação):** Eu apresento um resumo do relatório e o checklist visual (✅, 🟡, 🔲).
+    - Eu imprimo na tela o texto da nova versão do arquivo 'roadmap.md' para garantir a sincronia do roadmap de desenvolvimento.
+    - Eu aguardo a sua atualização manual no arquivo para seguirmos adiante. 
 
 ### 3. Protocolo de Verificação "Confiança Zero" (Anti-Falha)
 
@@ -72,21 +72,7 @@ A arquitetura final será baseada nos seguintes princípios:
 *   **Encapsulamento**: O Shadow DOM será usado para isolar estilos e comportamento.
 *   **Reutilização**: Os componentes serão facilmente importáveis.
 *   **Design Tokens**: As variáveis CSS em `style.css` são a nossa fonte única da verdade para estilos.
-
-### Componentes Implementados:
-*   `<badge-tag>`
-*   `<circular-spinner>`
-*   `<color-swatch>`
-*   `<content-card>`
-*   `<design-section>`
-*   `<icon-display>`
-*   `<layout-principle>`
-*   `<linear-loader>`
-*   `<page-header>`
-*   `<pill-button>`
-*   `<primary-tabs>`
-*   `<typography-scale>`
-*   `<user-feedback-message>`
+*   **Resiliência de Código**: Os códigos em css, html e js serão gerados sempre garantindo a retrocompatibilidade com todas as plataformas, evitando conflitos com frameworks tais como Tailwind, Bootstrap, Foundation e equivalentes.
 
 ## Plano de Refatoração (Checklist)
 
