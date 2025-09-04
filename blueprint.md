@@ -42,7 +42,11 @@ O comando **"Audit"** é a nossa cerimônia oficial para sincronização e verif
     3.  **`main.js`**: Para verificar se os componentes estão sendo registrados.
     4.  **`design-system.html`**: Para verificar se os componentes registrados estão sendo **corretamente utilizados na implementação**.
     5.  **`index.html`**: Como referência visual estática.
-*   **Fase II (Documentação):** Eu leio o `version-log.md` e gero o texto para a nova entrada do log. Você fará a atualização manual.
+*   **Fase II (Documentação):** Eu leio o `version-log.md` e gero o texto para uma nova entrada de log. Você fará a atualização manual. **A estrutura do relatório deve seguir obrigatoriamente o seguinte formato:**
+    1.  **Timestamp:** Um selo com a data e hora atuais.
+    2.  **Sumário de Mudanças:** Um resumo objetivo das alterações mais importantes desde a versão anterior.
+    3.  **Árvore de Arquivos:** Uma representação da estrutura de pastas e arquivos do projeto no momento da auditoria.
+    4.  **Checklist de Progresso:** Uma lista de tarefas (extraída do `blueprint.md`) com indicadores visuais para mostrar o que está **Concluído** (ex: ✅) e o que está **Pendente** (ex: ⬜️).
 *   **Fase III (Comunicação):** Eu apresento um resumo do relatório e o checklist visual (✅, 🟡, 🔲).
 
 ### 3. Protocolo de Verificação "Confiança Zero" (Anti-Falha)
