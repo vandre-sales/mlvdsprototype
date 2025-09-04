@@ -44,9 +44,10 @@ O comando **"Audit"** é a nossa cerimônia oficial para sincronização e verif
     5.  **`design-system.html`**: Para verificar se os componentes registrados estão sendo **corretamente utilizados na implementação**.
     6.  **`index.html`**: Como referência visual estática.
     7.  **`roadmap.md`**: para sincronizar o status do desenvolvimento.
+    -   Eu gero uma árvore com todas as pastas e arquivos do projeto.
 *   **Fase II (Documentação):** Eu leio o `CHANGELOG.md` e gero o texto para uma nova entrada de log. Você fará a atualização manual. **A estrutura do relatório no CHANGELOG.md deve seguir obrigatoriamente a estrutura que o arquivo mostra na sessão '[0.0.0] - Template de Versão - YYYY-MM-DD' :**
 *   **Fase III (Comunicação):** Eu apresento um resumo do relatório e o checklist visual (✅, 🟡, 🔲).
-    - Eu imprimo na tela o texto da nova versão do arquivo 'roadmap.md' para garantir a sincronia do roadmap de desenvolvimento.
+    - Eu imprimo na tela o texto da nova versão do arquivo 'roadmap.md' para garantir a sincronia do roadmap de desenvolvimento. Neste arquivo eu incluo a árvore de pastas e arquivos atuais.
     - Eu aguardo a sua atualização manual no arquivo para seguirmos adiante. 
 
 ### 3. Protocolo de Verificação "Confiança Zero" (Anti-Falha)
