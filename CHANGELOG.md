@@ -7,6 +7,52 @@ e este projeto adere ao [Versionamento Semântico (SemVer)](https://semver.org/s
 
 ---
 
+## `[0.1.1]` - 2025-09-04
+
+### Added (para novas funcionalidades)
+- N/A
+
+### Changed (para mudanças em funcionalidades existentes)
+- **Componente:** O cabeçalho estático foi refatorado para o Web Component `<page-header>`, encapsulando sua estrutura, estilos e comportamento para melhor manutenibilidade.
+- **Acessibilidade:** O avatar do usuário no cabeçalho foi alterado de uma `div` para uma tag `<img>` com um atributo `alt` apropriado, melhorando a acessibilidade para leitores de tela.
+
+### Deprecated (para funcionalidades que serão removidas)
+- N/A
+
+### Removed (para funcionalidades removidas)
+- **HTML:** Removido o código HTML estático do cabeçalho do arquivo `design-system.html`.
+- **CSS:** Removido o link para o arquivo `styles/header.css`, que não estava em uso.
+
+### Fixed (para correções de bugs)
+- **Layout:** Corrigido o bug de layout no cabeçalho onde os elementos quebravam em múltiplas linhas. Os itens agora se alinham corretamente em uma única linha responsiva.
+- **Renderização:** Solucionado o problema onde a página renderizava o HTML estático antigo em vez do Web Component `<page-header>`, garantindo que as lógicas e estilos corretos sejam aplicados.
+
+### Security (em caso de vulnerabilidades)
+- N/A
+
+---
+
+## `[0.1.0]` - 2024-07-30
+
+### Added (para novas funcionalidades)
+- Estrutura inicial do projeto com arquivos HTML, CSS, e JS.
+- Componentes Web fundacionais para o Design System:
+    - `DesignSection`
+    - `TypographyScale`
+    - `LayoutPrinciple`
+    - `ColorSwatch`
+    - `IconDisplay`
+    - `UserFeedbackMessage`
+    - `PrimaryTabs`
+    - `PillButton`
+    - `CircularSpinner`
+    - `LinearLoader`
+    - `ContentCard`
+    - `BadgeTag`
+- Arquivos de documentação: `blueprint.md`, `roadmap.md`, `CHANGELOG.md`.
+
+---
+
 ## `[0.0.0]` - Template de Versão - YYYY-MM-DD
 
 > Esta seção é o modelo a ser seguido para cada nova versão. Copie esta estrutura e preencha com as informações relevantes. **Sempre adicione a nova versão no topo do arquivo.**
@@ -16,44 +62,17 @@ e este projeto adere ao [Versionamento Semântico (SemVer)](https://semver.org/s
 - **Estilo:** Adicionados novos tokens de cor para `success` e `warning`.
 - **Documentação:** Adicionada a seção "Como Contribuir" no `README.md`.
 
-### Changed (para alterações em funcionalidades existentes)
-- **Componente:** O componente `<nome-do-componente>` agora aceita a propriedade `size` com as opções `small`, `medium`, `large`.
-- **Build:** Processo de build atualizado para a versão `X.Y.Z`, melhorando o tempo de compilação.
+### Changed (para mudanças em funcionalidades existentes)
+- **Componente:** Alterada a propriedade `size` do componente `<pill-button>` para aceitar valores em `rem`.
 
-### Deprecated (para funcionalidades que serão removidas em breve)
-- **Componente:** A propriedade `oldProp` no componente `<nome-do-componente>` está obsoleta e será removida na `v2.0.0`. Utilize `newProp` em seu lugar.
+### Deprecated (para funcionalidades que serão removidas)
+- **Componente:** O componente `<old-component>` foi marcado como obsoleto e será removido na próxima versão major.
 
 ### Removed (para funcionalidades removidas)
-- **Componente:** Removido o componente `<componente-obsoleto>` que foi marcado como `Deprecated` na `v1.5.0`.
-- **Dependência:** Removida a biblioteca `lib-exemplo` que não era mais utilizada.
+- **Arquivo:** Removido o arquivo de estilos `legacy-styles.css`.
 
 ### Fixed (para correções de bugs)
-- **Componente:** Corrigido bug no `<nome-do-componente>` que causava um overflow em telas menores.
-- **Acessibilidade:** Corrigido o contraste de cores no texto do rodapé para atender às diretrizes WCAG.
+- **Componente:** Corrigido o bug no `<circular-spinner>` que causava uma animação irregular no Firefox.
 
-### Security (para vulnerabilidades)
-- **Dependência:** Atualizada a dependência `pacote-exemplo` da versão `1.2.3` para `1.2.4` para corrigir uma vulnerabilidade de segurança.
-
----
-
-## `[1.0.0]` - Lançamento Inicial - 2025-09-05
-
-### Added
-- Estrutura inicial do projeto com `index.html`, `design-system.html`, `main.js` e `style.css`.
-- Documentação inicial em `blueprint.md` e `version-log.md`.
-- Criação da pasta `docs` com o guia de boas práticas `design-system-best-practices.md`.
-- Adicionado `CHANGELOG.md` para rastrear as mudanças de forma padronizada.
-- Componentes iniciais implementados:
-  - `<badge-tag>`
-  - `<circular-spinner>`
-  - `<color-swatch>`
-  - `<content-card>`
-  - `<design-section>`
-  - `<icon-display>`
-  - `<layout-principle>`
-  - `<linear-loader>`
-  - `<page-header>`
-  - `<pill-button>`
-  - `<primary-tabs>`
-  - `<typography-scale>`
-  - `<user-feedback-message>`
+### Security (em caso de vulnerabilidades)
+- **Dependência:** Atualizada a biblioteca `some-library` para a versão `1.2.4` para corrigir uma vulnerabilidade de segurança.

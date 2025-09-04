@@ -35,8 +35,8 @@ Este documento dinâmico rastreia nosso progresso e define as próximas priorida
 | Componente: `<linear-loader>`                 | ✅ Concluído     | 🔥 Altíssima | Sprint 2   |
 | Componente: `<badge-tag>`                     | ✅ Concluído     | 🔥 Altíssima | Sprint 2   |
 | Componente: `<content-card>`                  | ✅ Concluído     | 🔥 Altíssima | Sprint 2   |
-| Componente: `<page-header>`                   | ▶️ Em Progresso  | 🔥 Altíssima | Sprint 3   |
-| Implementação do `<page-header>`              | 🔲 Próximo      | 🔥 Altíssima | Sprint 3   |
+| Componente: `<page-header>`                   | ✅ Concluído     | 🔥 Altíssima | Sprint 3   |
+| Implementação do `<page-header>`              | ✅ Concluído     | 🔥 Altíssima | Sprint 3   |
 
 ---
 
