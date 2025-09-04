@@ -2,7 +2,11 @@
 
 ## Visão Geral
 
-Este documento serve como a fonte da verdade para o Design System da Meliva.ai. O objetivo é refatorar o protótipo inicial, que consiste em um único arquivo HTML, para uma arquitetura modular, escalável e reutilizável baseada em Web Components. Isso garantirá consistência visual e de experiência do usuário em todas as plataformas web e mobile da Meliva.ai.
+Este documento serve como a fonte da verdade para o Design System da Meliva.ai. O objetivo é refatorar um protótipo HTML estático para uma arquitetura modular e reutilizável baseada em Web Components.
+
+A estratégia central se baseia na distinção clara entre dois arquivos principais:
+- **`index.html`**: O protótipo visual original. **Este arquivo é uma referência estática e imutável.** Ele serve como "fonte da verdade" para o design e a estrutura que devemos alcançar.
+- **`design-system.html`**: A nossa tela de implementação. **É neste arquivo que a refatoração acontece.** Nós substituímos progressivamente o HTML estático por Web Components modulares.
 
 ---
 
@@ -32,7 +36,12 @@ Nossa colaboração se baseia em uma clara divisão de papéis para maximizar a 
 
 O comando **"Audit"** é a nossa cerimônia oficial para sincronização e verificação.
 
-*   **Fase I (Análise):** Eu leio os arquivos `index.html`, `design-system.html`, `main.js`, a pasta `/components` e `style.css` para construir um relatório de consistência.
+*   **Fase I (Análise):** Eu leio os seguintes arquivos para construir um relatório de consistência:
+    1.  **`blueprint.md`**: Para entender as regras e o escopo.
+    2.  **`/components`**: Para listar os componentes existentes.
+    3.  **`main.js`**: Para verificar se os componentes estão sendo registrados.
+    4.  **`design-system.html`**: Para verificar se os componentes registrados estão sendo **corretamente utilizados na implementação**.
+    5.  **`index.html`**: Como referência visual estática.
 *   **Fase II (Documentação):** Eu leio o `version-log.md` e gero o texto para a nova entrada do log. Você fará a atualização manual.
 *   **Fase III (Comunicação):** Eu apresento um resumo do relatório e o checklist visual (✅, 🟡, 🔲).
 
@@ -79,8 +88,9 @@ A arquitetura final será baseada nos seguintes princípios:
 
 *   [✅] Estrutura e Fundações
 *   [✅] Componentização da UI (Typography, Layout, Color, Iconography, Feedback, Tabs, Loaders, Cards, Badges)
-*   [✅] Refatoração do Header para Web Component
-*   [🔲] **(Próximo)** Refatorar a seção **"Data Tables"**.
+*   [🟡] Refatoração do Header para Web Component (Componente criado, mas não implementado)
+*   [🔲] **(Próximo)** Implementar o `<page-header>` no `design-system.html`.
+*   [🔲] Refatorar a seção **"Data Tables"**.
 *   [🔲] Refatorar a seção **"Modals & Pop-ups"**.
 *   [🔲] Refatorar a seção **"Buttons"**.
 *   ... e assim por diante.
