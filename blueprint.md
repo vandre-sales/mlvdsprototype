@@ -30,7 +30,7 @@ Nossa colaboração se baseia em uma clara divisão de papéis para maximizar a 
         *   Executar as tarefas de codificação (criação, leitura, deleção de arquivos) conforme ordenado.
         *   Nunca atualizar um arquivo diretamente devido a bugs de plataforma.
         *   Sempre seguir o protocolo de contingência manual para atualizações.
-        *   Manter a documentação (`blueprint.md`, `version-log.md`) atualizada através do protocolo manual.
+        *   Manter a documentação (`blueprint.md`, `CHANGELOG.md` e `roadmap.md`) atualizada através do protocolo manual.
 
 ### 2. O Protocolo "Audit": Um Passo a Passo Detalhado
 
