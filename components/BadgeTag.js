@@ -10,26 +10,25 @@ class BadgeTag extends HTMLElement {
     const shape = this.getAttribute('shape') || 'rounded';
     const icon = this.getAttribute('icon');
 
-    // Define styles directly, removing Tailwind classes
     const styles = `
       .badge {
         display: inline-flex;
         align-items: center;
-        gap: 0.375rem; /* Equivalent to gap-1.5 */
-        font-weight: 500; /* medium */
-        border-radius: ${shape === 'pill' ? '9999px' : '0.375rem'}; /* rounded-full or rounded-md */
+        gap: 0.375rem;
+        font-weight: var(--font-weight-medium);
+        border-radius: ${shape === 'pill' ? '9999px' : '0.375rem'};
       }
       .badge-sm {
-        padding: 0.125rem 0.5rem; /* py-0.5 px-2 */
+        padding: 0.125rem 0.5rem;
         font-size: 10px;
       }
       .badge-md {
-        padding: 0.25rem 0.625rem; /* py-1 px-2.5 */
-        font-size: 0.75rem; /* text-xs */
+        padding: 0.25rem 0.625rem;
+        font-size: 0.75rem;
       }
       .badge-lg {
-        padding: 0.375rem 0.75rem; /* py-1.5 px-3 */
-        font-size: 0.875rem; /* text-sm */
+        padding: 0.375rem 0.75rem;
+        font-size: 0.875rem;
       }
       
       /* Type styles */
@@ -49,9 +48,12 @@ class BadgeTag extends HTMLElement {
         background-color: rgba(235, 87, 87, 0.2);
         color: var(--color-danger);
       }
+      
+      .icon {
+        font-size: 1rem; /* Tamanho do ícone movido para CSS */
+      }
     `;
 
-    // Map size attributes to CSS classes
     const sizeClassMap = {
       small: 'badge-sm',
       medium: 'badge-md',
@@ -59,7 +61,6 @@ class BadgeTag extends HTMLElement {
     };
     const sizeClass = sizeClassMap[size] || 'badge-md';
 
-    // Map type attributes to CSS classes
     const typeClassMap = {
         default: 'badge-default',
         success: 'badge-success',
@@ -71,7 +72,7 @@ class BadgeTag extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>${styles}</style>
       <span class="badge ${sizeClass} ${typeClass}">
-        ${icon ? `<span class="material-symbols-rounded" style="font-size: 1rem;">${icon}</span>` : ''}
+        ${icon ? `<span class="material-symbols-rounded icon">${icon}</span>` : ''}
         <slot></slot>
       </span>
     `;

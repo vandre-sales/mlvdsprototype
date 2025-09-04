@@ -85,3 +85,10 @@ A arquitetura final será baseada nos seguintes princípios:
 *   [🔲] Refatorar a seção **"Modals & Pop-ups"**.
 *   [🔲] Refatorar a seção **"Buttons"**.
 *   ... e assim por diante.
+
+## Base de conhecimento e priorização
+
+Fontes da Verdade absoluta:
+- docs/design-system-best-practices.md;
+- docs/typography.md;
+> Se algum conflito lógico ou conceitual surgir, as informações desses documentos prevalecem sobre outors fatos.

@@ -26,8 +26,8 @@ class PillButton extends HTMLElement {
           border-radius: 9999px;
           background-color: transparent;
           padding: 0.5rem 1rem;
-          font-size: 0.875rem;
-          font-weight: 500;
+          font-size: 0.875rem; /* Manteremos 14px por enquanto */
+          font-weight: var(--font-weight-medium);
           color: var(--color-blue-light);
           cursor: pointer;
           border: none;
@@ -39,7 +39,7 @@ class PillButton extends HTMLElement {
         .pill.active {
           background-color: var(--color-blue-standard);
           color: var(--color-white);
-          font-weight: 600;
+          font-weight: var(--font-weight-semibold);
         }
         .pill.disabled {
           background-color: transparent;

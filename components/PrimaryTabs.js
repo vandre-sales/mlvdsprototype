@@ -27,8 +27,8 @@ class PrimaryTabs extends HTMLElement {
           white-space: nowrap;
           border-bottom: 2px solid transparent;
           padding: 1rem 0.25rem;
-          font-size: 0.875rem;
-          font-weight: 500;
+          font-size: 0.875rem; /* Mantido 14px por consistência visual */
+          font-weight: var(--font-weight-medium);
           color: var(--color-blue-light);
           background-color: transparent;
           border-radius: 0;
@@ -41,7 +41,7 @@ class PrimaryTabs extends HTMLElement {
         .tab.active {
           border-bottom-color: var(--color-blue-standard);
           color: var(--color-white);
-          font-weight: 600;
+          font-weight: var(--font-weight-semibold);
         }
         .icon {
           font-size: 1rem;

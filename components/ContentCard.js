@@ -33,13 +33,16 @@ class ContentCard extends HTMLElement {
           flex: 1; /* Allows content to fill space */
         }
         .title {
-          font-size: 1.25rem;
-          font-weight: 700;
+          font-size: var(--font-size-h5);
+          line-height: var(--line-height-h5);
+          font-weight: var(--font-weight-medium);
           color: var(--color-white);
           margin: 0 0 0.5rem 0;
         }
         .description {
-          font-size: 0.875rem;
+          font-size: 0.875rem; /* 14px, intencionalmente menor que o corpo */
+          line-height: 1.5;
+          font-weight: var(--font-weight-light);
           color: var(--color-blue-light);
           margin: 0;
         }
@@ -62,7 +65,7 @@ class ContentCard extends HTMLElement {
           width: 3rem;
           height: 3rem;
           border-radius: 0.5rem;
-          background-color: rgba(75, 156, 214, 0.2); /* var(--color-blue-standard) with 20% opacity */
+          background-color: rgba(75, 156, 214, 0.2);
         }
         .icon {
           font-size: 2rem;
@@ -70,7 +73,8 @@ class ContentCard extends HTMLElement {
           font-variation-settings: 'FILL' 1;
         }
         .informative-text .title {
-           font-size: 1.125rem;
+           font-size: var(--font-size-h6);
+           line-height: var(--line-height-h6);
         }
         
         /* Interactive Card Styles */

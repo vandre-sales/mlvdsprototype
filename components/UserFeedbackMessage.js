@@ -57,12 +57,16 @@ class UserFeedbackMessage extends HTMLElement {
           flex: 1;
         }
         .title {
-          font-weight: 600;
+          font-size: var(--font-size-h6);
+          line-height: var(--line-height-h6);
+          font-weight: var(--font-weight-semibold);
           color: var(--color-white);
           margin: 0;
         }
         .description {
-          font-size: 0.875rem;
+          font-size: 0.875rem; /* 14px, intencionalmente menor que o corpo */
+          line-height: 1.5; /* Altura de linha proporcional */
+          font-weight: var(--font-weight-light);
           color: var(--color-blue-light);
           margin: 0.25rem 0 0 0;
         }

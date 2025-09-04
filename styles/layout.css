@@ -2,90 +2,90 @@
    1. LAYOUT DE PÁGINA (ESTRUTURA PRINCIPAL)
    ========================================================================== */
    .page-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-  
-  .main-content {
-    flex-grow: 1;
-    padding: 3rem 10rem; /* Equivalente a py-12 px-40 */
-  }
-  
-  .main-container {
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  /* ==========================================================================
-     2. UTILITÁRIOS DE DISPLAY & FLEXBOX/GRID
-     ========================================================================== */
-  .flex { display: flex; }
-  .grid { display: grid; }
-  .relative { position: relative; }
-  .sticky { position: sticky; }
-  
-  /* Direção e Crescimento */
-  .flex-col { flex-direction: column; }
-  .grow { flex-grow: 1; }
-  .flex-1 { flex: 1 1 0%; }
-  
-  /* Alinhamento e Justificação */
-  .items-center { align-items: center; }
-  .items-start { align-items: flex-start; }
-  .justify-between { justify-content: space-between; }
-  
-  /* ==========================================================================
-     3. UTILITÁRIOS DE ESPAÇAMENTO (PADDING, MARGIN, GAP)
-     ========================================================================== */
-  /* Padding */
-  .p-6 { padding: 1.5rem; }
-  .p-8 { padding: 2rem; }
-  .px-10 { padding-left: 2.5rem; padding-right: 2.5rem; }
-  .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
-  
-  /* Margin */
-  .mt-1 { margin-top: 0.25rem; }
-  .mt-8 { margin-top: 2rem; }
-  
-  /* Gap */
-  .gap-4 { gap: 1rem; }
-  .gap-6 { gap: 1.5rem; }
-  .gap-8 { gap: 2rem; }
-  
-  /* Espaçamento entre Filhos (como space-y) */
-  .space-y-12 > :not([hidden]) ~ :not([hidden]) { margin-top: 3rem; }
-  
-  /* ==========================================================================
-     4. UTILITÁRIOS DE GRID LAYOUT
-     ========================================================================== */
-  .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-  
-  /* ==========================================================================
-     5. UTILITÁRIOS DE ESTILO E EFEITOS
-     ========================================================================== */
-  .border-b { border-bottom-width: 1px; }
-  .border-solid { border-style: solid; }
-  .rounded-lg { border-radius: 0.5rem; }
-  .whitespace-nowrap { white-space: nowrap; }
-  .backdrop-blur-sm { backdrop-filter: blur(4px); }
-  .top-0 { top: 0; }
-  .z-50 { z-index: 50; }
-  
-  /* ==========================================================================
-     6. ESTILOS RESPONSIVOS
-     ========================================================================== */
-  @media (min-width: 768px) {
-    .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .md\:col-span-1 { grid-column: span 1 / span 1; }
-    .md\:col-span-2 { grid-column: span 2 / span 2; }
-  }
-  
-  @media (min-width: 1024px) {
-      .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .lg\:col-span-2 { grid-column: span 2 / span 2; }
-  }
-  
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    
+    .main-content {
+      flex-grow: 1;
+      padding: 3rem 10rem; /* Equivalente a py-12 px-40 */
+    }
+    
+    .main-container {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* ==========================================================================
+       2. UTILITÁRIOS DE DISPLAY & FLEXBOX/GRID
+       ========================================================================== */
+    .flex { display: flex; }
+    .grid { display: grid; }
+    .relative { position: relative; }
+    .sticky { position: sticky; }
+    
+    /* Direção e Crescimento */
+    .flex-col { flex-direction: column; }
+    .grow { flex-grow: 1; }
+    .flex-1 { flex: 1 1 0%; }
+    
+    /* Alinhamento e Justificação */
+    .items-center { align-items: center; }
+    .items-start { align-items: flex-start; }
+    .justify-between { justify-content: space-between; }
+    
+    /* ==========================================================================
+       3. UTILITÁRIOS DE ESPAÇAMENTO (PADDING, MARGIN, GAP)
+       ========================================================================== */
+    /* Padding */
+    .p-6 { padding: 1.5rem; }
+    .p-8 { padding: 2rem; }
+    .px-10 { padding-left: 2.5rem; padding-right: 2.5rem; }
+    .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+    
+    /* Margin */
+    .mt-1 { margin-top: 0.25rem; }
+    .mt-8 { margin-top: 2rem; }
+    
+    /* Gap */
+    .gap-4 { gap: 1rem; }
+    .gap-6 { gap: 1.5rem; }
+    .gap-8 { gap: 2rem; }
+    
+    /* Espaçamento entre Filhos (como space-y) */
+    .space-y-12 > :not([hidden]) ~ :not([hidden]) { margin-top: 3rem; }
+    
+    /* ==========================================================================
+       4. UTILITÁRIOS DE GRID LAYOUT
+       ========================================================================== */
+    .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    
+    /* ==========================================================================
+       5. UTILITÁRIOS DE ESTILO E EFEITOS
+       ========================================================================== */
+    .border-b { border-bottom-width: 1px; }
+    .border-solid { border-style: solid; }
+    .rounded-lg { border-radius: 0.5rem; }
+    .whitespace-nowrap { white-space: nowrap; }
+    .backdrop-blur-sm { backdrop-filter: blur(4px); }
+    .top-0 { top: 0; }
+    .z-50 { z-index: 50; }
+    
+    /* ==========================================================================
+       6. ESTILOS RESPONSIVOS
+       ========================================================================== */
+    @media (min-width: 768px) {
+      .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .md\:col-span-1 { grid-column: span 1 / span 1; }
+      .md\:col-span-2 { grid-column: span 2 / span 2; }
+    }
+    
+    @media (min-width: 1024px) {
+        .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .lg\:col-span-2 { grid-column: span 2 / span 2; }
+    }
+    

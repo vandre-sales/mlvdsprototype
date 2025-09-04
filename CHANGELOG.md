@@ -7,6 +7,18 @@ e este projeto adere ao [Versionamento Semântico (SemVer)](https://semver.org/s
 
 ---
 
+## `[0.1.3]` - 2024-07-31
+
+### Changed (para mudanças em funcionalidades existentes)
+- **CSS:** Centralizados todos os Design Tokens de tipografia (família, tamanho, peso, altura da linha) no `:root` do arquivo `style.css`, alinhando a implementação com as diretrizes do `typography.md`.
+- **Componentes:** Refatorados todos os 8 componentes Web existentes (`PillButton`, `PrimaryTabs`, `UserFeedbackMessage`, `BadgeTag`, `ContentCard`, `PageHeader`, etc.) para utilizar os novos tokens de tipografia em vez de valores de CSS "hardcoded".
+- **CSS:** A regra global `body` foi atualizada para usar os novos tokens de tipografia, estabelecendo um padrão consistente para todo o texto fora dos componentes.
+
+### Removed (para funcionalidades removidas)
+- **CSS:** Removidas classes utilitárias de tipografia genéricas (ex: `.font-bold`, `.text-xl`) do `layout.css` para eliminar conflitos com o novo sistema de tokens.
+
+---
+
 ## `[0.1.2]` - 2024-07-31
 
 ### Changed (para mudanças em funcionalidades existentes)
@@ -40,19 +52,7 @@ e este projeto adere ao [Versionamento Semântico (SemVer)](https://semver.org/s
 
 ### Added (para novas funcionalidades)
 - Estrutura inicial do projeto com arquivos HTML, CSS, e JS.
-- Componentes Web fundacionais para o Design System:
-    - `DesignSection`
-    - `TypographyScale`
-    - `LayoutPrinciple`
-    - `ColorSwatch`
-    - `IconDisplay`
-    - `UserFeedbackMessage`
-    - `PrimaryTabs`
-    - `PillButton`
-    - `CircularSpinner`
-    - `LinearLoader`
-    - `ContentCard`
-    - `BadgeTag`
+- Componentes Web fundacionais para o Design System.
 - Arquivos de documentação: `blueprint.md`, `roadmap.md`, `CHANGELOG.md`.
 
 ---
@@ -63,14 +63,9 @@ e este projeto adere ao [Versionamento Semântico (SemVer)](https://semver.org/s
 
 ### Added (para novas funcionalidades)
 - **Componente:** Adicionado o novo componente `<nome-do-componente>`.
-- **Estilo:** Adicionados novos tokens de cor para `success` e `warning`.
-- **Documentação:** Adicionada a seção "Como Contribuir" no `README.md`.
 
 ### Changed (para mudanças em funcionalidades existentes)
 - **Componente:** Alterada a propriedade `size` do componente `<pill-button>` para aceitar valores em `rem`.
-
-### Deprecated (para funcionalidades que serão removidas)
-- **Componente:** O componente `<old-component>` foi marcado como obsoleto e será removido na próxima versão major.
 
 ### Removed (para funcionalidades removidas)
 - **Arquivo:** Removido o arquivo de estilos `legacy-styles.css`.
@@ -78,5 +73,4 @@ e este projeto adere ao [Versionamento Semântico (SemVer)](https://semver.org/s
 ### Fixed (para correções de bugs)
 - **Componente:** Corrigido o bug no `<circular-spinner>` que causava uma animação irregular no Firefox.
 
-### Security (em caso de vulnerabilidades)
-- **Dependência:** Atualizada a biblioteca `some-library` para a versão `1.2.4` para corrigir uma vulnerabilidade de segurança.
+---

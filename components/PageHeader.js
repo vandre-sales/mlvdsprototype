@@ -18,10 +18,10 @@ class PageHeader extends HTMLElement {
           z-index: 50;
           display: flex;
           align-items: center;
-          gap: 2rem; /* Adiciona um espaçamento entre o logo e a navegação */
-          padding: 0.75rem 2.5rem; /* py-3 px-10 */
+          gap: 2rem;
+          padding: 0.75rem 2.5rem;
           border-bottom: 1px solid var(--color-blue-enterprise);
-          background-color: rgba(17, 45, 71, 0.8); /* bg-[var(--color-background)]/80 */
+          background-color: rgba(17, 45, 71, 0.8);
           backdrop-filter: blur(4px);
           white-space: nowrap;
         }
@@ -36,12 +36,13 @@ class PageHeader extends HTMLElement {
           width: 1.5rem;
           height: 1.5rem;
           color: var(--color-blue-standard);
-          flex-shrink: 0; /* Impede que o SVG seja espremido ou esticado */
+          flex-shrink: 0;
         }
 
         .logo-group h1 {
-          font-size: 1.25rem;
-          font-weight: 700;
+          font-size: var(--font-size-h5);
+          line-height: var(--line-height-h5);
+          font-weight: var(--font-weight-medium);
           color: var(--color-white);
           margin: 0;
         }
@@ -50,12 +51,12 @@ class PageHeader extends HTMLElement {
           display: flex;
           align-items: center;
           gap: 2rem;
-          flex-grow: 1; /* Faz a navegação ocupar o espaço disponível */
+          flex-grow: 1;
         }
 
         nav a {
-          font-size: 0.875rem;
-          font-weight: 500;
+          font-size: 0.875rem; /* 14px, intencionalmente menor que o corpo */
+          font-weight: var(--font-weight-medium);
           color: var(--color-blue-light);
           text-decoration: none;
           transition: color 0.2s ease-in-out;
@@ -68,17 +69,17 @@ class PageHeader extends HTMLElement {
         .actions {
             display: flex;
             align-items: center;
-            gap: 1.5rem; /* Ajusta o espaçamento interno dos botões */
-            margin-left: auto; /* Empurra o grupo de ações para a extrema direita */
+            gap: 1.5rem;
+            margin-left: auto;
         }
 
         .help-button {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 2.5rem; /* h-10 w-10 */
+            width: 2.5rem;
             height: 2.5rem;
-            border-radius: 9999px; /* rounded-full */
+            border-radius: 9999px;
             background-color: var(--color-blue-dark);
             border: none;
             cursor: pointer;
@@ -94,9 +95,9 @@ class PageHeader extends HTMLElement {
         }
 
         .user-avatar {
-            width: 2.5rem; /* size-10 */
+            width: 2.5rem;
             height: 2.5rem;
-            border-radius: 9999px; /* rounded-full */
+            border-radius: 9999px;
             object-fit: cover;
         }
       </style>
