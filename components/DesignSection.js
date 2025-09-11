@@ -20,12 +20,18 @@ class DesignSection extends HTMLElement {
             margin-bottom: 2rem;
         }
         h2 {
-          font-size: 2.25rem;
-          font-weight: 700;
+          font-family: var(--font-family-body);
+          font-size: var(--font-size-h2);
+          line-height: var(--line-height-h2);
+          font-weight: var(--font-weight-medium);
           color: var(--color-white);
           margin: 0;
         }
         p {
+          font-family: var(--font-family-body);
+          font-size: var(--font-size-body);
+          line-height: var(--line-height-body);
+          font-weight: var(--font-weight-light);
           margin-top: 1rem;
           color: var(--color-blue-light);
           max-width: 80ch;

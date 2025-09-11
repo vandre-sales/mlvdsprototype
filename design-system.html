@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meliva.ai Design System</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+
+    <!-- Font Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&family=Varela+Round&display=swap" rel="stylesheet">
+    
+    <!-- Icon Imports -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
     
-    <!-- CSS Corrigido -->
+    <!-- CSS -->
     <link href="style.css" rel="stylesheet"/>
     <link href="styles/layout.css" rel="stylesheet"/>
 
@@ -26,15 +30,15 @@
                     
                     <design-section title-text="Introduction" description-text="This design system provides a unified framework for creating user interfaces for our SaaS platform. It includes guidelines for typography, color palettes, iconography, and component usage, all designed to ensure a consistent and cohesive user experience across all applications."></design-section>
 
-                    <design-section id="typography" title-text="Typography" description-text="We use the Montserrat font family for all text elements. This ensures a modern and clean aesthetic, guaranteeing readability and visual appeal. Different weights and sizes are used to create hierarchy and emphasis within the content.">
+                    <design-section id="typography" title-text="Typography" description-text="We use a combination of Varela Round for primary headings and Montserrat for all other text to create a clear and professional visual hierarchy.">
                       <div class="mt-10 space-y-8">
-                        <typography-scale tag="H1" size="text-5xl" weight="font-black" title-text="Montserrat Black 48px"></typography-scale>
-                        <typography-scale tag="H2" size="text-4xl" weight="font-bold" title-text="Montserrat Bold 36px"></typography-scale>
-                        <typography-scale tag="H3" size="text-3xl" weight="font-bold" title-text="Montserrat Bold 30px"></typography-scale>
-                        <typography-scale tag="H4" size="text-2xl" weight="font-bold" title-text="Montserrat Bold 24px"></typography-scale>
-                        <typography-scale tag="H5" size="text-xl" weight="font-medium" title-text="Montserrat Medium 20px"></typography-scale>
-                        <typography-scale tag="H6" size="text-lg" weight="font-medium" title-text="Montserrat Medium 18px"></typography-scale>
-                        <typography-scale tag="Body" size="text-base" weight="font-normal" title-text="Montserrat Regular 16px" example-text="The quick brown fox jumps over the lazy dog. This is a longer paragraph to demonstrate the body text style. It should be easy to read and visually distinct from the headings."></typography-scale>
+                        <typography-scale tag="H1" title-text="Varela Round Medium 36px"></typography-scale>
+                        <typography-scale tag="H2" title-text="Montserrat Medium 32px"></typography-scale>
+                        <typography-scale tag="H3" title-text="Montserrat Medium 28px"></typography-scale>
+                        <typography-scale tag="H4" title-text="Montserrat Medium 24px"></typography-scale>
+                        <typography-scale tag="H5" title-text="Montserrat Medium 20px"></typography-scale>
+                        <typography-scale tag="H6" title-text="Montserrat Medium 16px"></typography-scale>
+                        <typography-scale tag="Body" title-text="Montserrat Light 16px" example-text="The quick brown fox jumps over the lazy dog. This is a longer paragraph to demonstrate the body text style. It should be easy to read and visually distinct from the headings."></typography-scale>
                       </div>
                     </design-section>
 
@@ -42,8 +46,8 @@
                       <div class="mt-8 space-y-12">
                         <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-3">
                           <div class="md:col-span-1">
-                            <h3 class="text-lg font-bold text-[var(--color-white)]">Layout Principles</h3>
-                            <p class="mt-1 text-sm text-[var(--color-blue-light)]"> Core principles that form the foundation of our layout design. </p>
+                            <h3>Layout Principles</h3>
+                            <p class="mt-1">Core principles that form the foundation of our layout design.</p>
                           </div>
                           <div class="grid w-full grid-cols-1 gap-6 rounded-lg bg-[var(--color-background)] p-8 md:col-span-2 sm:grid-cols-2">
                             <layout-principle icon="space_dashboard" title-text="Whitespace" description-text="Use ample whitespace to reduce clutter and improve readability."></layout-principle>
@@ -52,56 +56,10 @@
                             <layout-principle icon="repeat" title-text="Repetition" description-text="Repeat design elements to create consistency and rhythm."></layout-principle>
                           </div>
                         </div>
-                        <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-3">
-                          <div class="md:col-span-1">
-                            <h3 class="text-lg font-bold text-[var(--color-white)]">Grid System</h3>
-                            <p class="mt-1 text-sm text-[var(--color-blue-light)]"> We use a 12-column responsive grid system to ensure consistent and adaptive layouts across all devices. </p>
-                          </div>
-                          <div class="w-full rounded-lg bg-[var(--color-background)] p-8 md:col-span-2">
-                            <div class="grid grid-cols-12 gap-4">
-                              <div class="col-span-12 h-16 rounded-md bg-[var(--color-blue-enterprise)]/50 p-2 text-center text-sm text-white">col-12</div>
-                              <div class="col-span-6 h-16 rounded-md bg-[var(--color-blue-enterprise)]/50 p-2 text-center text-sm text-white">col-6</div>
-                              <div class="col-span-6 h-16 rounded-md bg-[var(--color-blue-enterprise)]/50 p-2 text-center text-sm text-white">col-6</div>
-                              <div class="col-span-4 h-16 rounded-md bg-[var(--color-blue-enterprise)]/50 p-2 text-center text-sm text-white">col-4</div>
-                              <div class="col-span-4 h-16 rounded-md bg-[var(--color-blue-enterprise)]/50 p-2 text-center text-sm text-white">col-4</div>
-                              <div class="col-span-4 h-16 rounded-md bg-[var(--color-blue-enterprise)]/50 p-2 text-center text-sm text-white">col-4</div>
-                              <div class="col-span-3 h-16 rounded-md bg-[var(--color-blue-enterprise)]/50 p-2 text-center text-sm text-white">col-3</div>
-                              <div class="col-span-3 h-16 rounded-md bg-[var(--color-blue-enterprise)]/50 p-2 text-center text-sm text-white">col-3</div>
-                              <div class="col-span-3 h-16 rounded-md bg-[var(--color-blue-enterprise)]/50 p-2 text-center text-sm text-white">col-3</div>
-                              <div class="col-span-3 h-16 rounded-md bg-[var(--color-blue-enterprise)]/50 p-2 text-center text-sm text-white">col-3</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-3">
-                          <div class="md:col-span-1">
-                            <h3 class="text-lg font-bold text-[var(--color-white)]">Layout Example</h3>
-                            <p class="mt-1 text-sm text-[var(--color-blue-light)]"> A practical example of how to apply these principles to a page layout. </p>
-                          </div>
-                          <div class="w-full rounded-lg border border-[var(--color-blue-enterprise)] bg-[var(--color-background)] p-8 md:col-span-2">
-                            <div class="flex gap-8">
-                              <div class="w-1/4">
-                                <div class="h-40 rounded-lg bg-[var(--color-blue-dark)]"></div>
-                              </div>
-                              <div class="w-3/4 space-y-4">
-                                <div class="h-10 rounded-lg bg-[var(--color-blue-dark)]"></div>
-                                <div class="h-24 rounded-lg bg-[var(--color-blue-dark)]"></div>
-                                <div class="flex gap-4">
-                                  <div class="h-10 w-1/2 rounded-lg bg-[var(--color-blue-dark)]"></div>
-                                  <div class="h-10 w-1/2 rounded-lg bg-[var(--color-blue-dark)]"></div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="mt-8 grid grid-cols-3 gap-8">
-                              <div class="h-32 rounded-lg bg-[var(--color-blue-dark)]"></div>
-                              <div class="h-32 rounded-lg bg-[var(--color-blue-dark)]"></div>
-                              <div class="h-32 rounded-lg bg-[var(--color-blue-dark)]"></div>
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </design-section>
 
-                    <design-section id="color-palette" title-text="Color Palette" description-text="Our primary color is blue (#4b9cd6), which represents trust, stability, and innovation. We use a dark mode theme to reduce eye strain and enhance focus. Secondary colors and tints are used to create visual interest and highlight key elements.">
+                    <design-section id="color-palette" title-text="Color Palette" description-text="Our primary color is blue, which represents trust, stability, and innovation. We use a dark mode theme to reduce eye strain and enhance focus.">
                       <div class="mt-8 grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
                         <color-swatch color-name="Blue Standard" color-var="--color-blue-standard" color-hex="#4b9cd6"></color-swatch>
                         <color-swatch color-name="Blue Enterprise" color-var="--color-blue-enterprise" color-hex="#1a4f75"></color-swatch>
@@ -115,120 +73,35 @@
                       </div>
                     </design-section>
                     
-                    <design-section id="iconography" title-text="Iconography" description-text="We utilize Material Design icons, both Rounded and Outline styles, to provide a consistent and recognizable visual language. Icons are used to enhance usability and convey meaning efficiently.">
+                    <design-section id="iconography" title-text="Iconography" description-text="We utilize Material Design icons to provide a consistent and recognizable visual language.">
                       <div class="mt-8 space-y-8">
                         <div>
-                          <h3 class="text-xl font-bold text-[var(--color-white)]">Styles</h3>
-                          <p class="mt-2 text-[var(--color-blue-light)]">We use two main icon styles: Rounded and Outline. Rounded icons are used for primary actions and filled states. Outline icons are used for secondary actions and non-filled states.</p>
-                          <div class="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2">
-                            <div class="rounded-lg bg-[var(--color-background)] p-6">
-                              <h4 class="font-semibold text-[var(--color-white)]">Rounded</h4>
-                              <p class="text-sm text-[var(--color-blue-light)]">Use for filled, prominent actions.</p>
-                              <div class="mt-4 flex flex-wrap gap-4">
-                                <icon-display icon-name="home" icon-style="Rounded" size="48px"></icon-display>
-                                <icon-display icon-name="check_circle" icon-style="Rounded" size="48px"></icon-display>
-                                <icon-display icon-name="star" icon-style="Rounded" size="48px"></icon-display>
-                              </div>
-                            </div>
-                            <div class="rounded-lg bg-[var(--color-background)] p-6">
-                              <h4 class="font-semibold text-[var(--color-white)]">Outline</h4>
-                              <p class="text-sm text-[var(--color-blue-light)]">Use for secondary, less prominent actions.</p>
-                              <div class="mt-4 flex flex-wrap gap-4">
-                                <icon-display icon-name="home" icon-style="Outlined" size="48px"></icon-display>
-                                <icon-display icon-name="favorite" icon-style="Outlined" size="48px"></icon-display>
-                                <icon-display icon-name="settings" icon-style="Outlined" size="48px"></icon-display>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div>
-                          <h3 class="text-xl font-bold text-[var(--color-white)]">Sizing</h3>
-                          <p class="mt-2 text-[var(--color-blue-light)]">Icons should be scaled consistently. The default size is 24px. Smaller (20px) and larger (48px) sizes can be used for specific contexts like buttons or display sections.</p>
-                          <div class="mt-4 flex flex-wrap items-center gap-8">
-                            <div class="flex flex-col items-center gap-2">
-                              <icon-display icon-name="visibility" size="20px"></icon-display>
-                              <p class="text-sm">20px</p>
-                            </div>
-                            <div class="flex flex-col items-center gap-2">
-                              <icon-display icon-name="visibility" size="24px"></icon-display>
-                              <p class="text-sm">24px (Default)</p>
-                            </div>
-                            <div class="flex flex-col items-center gap-2">
-                              <icon-display icon-name="visibility" size="48px"></icon-display>
-                              <p class="text-sm">48px</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div>
-                          <h3 class="text-xl font-bold text-[var(--color-white)]">Color</h3>
-                          <p class="mt-2 text-[var(--color-blue-light)]">Icon colors should align with our color palette. Use Blue Standard for primary icons, and Blue Light or White for general use. Use semantic colors (Success, Alert, Danger) for status indicators.</p>
-                          <div class="mt-4 flex flex-wrap gap-6">
-                            <div class="flex items-center gap-2">
-                              <icon-display icon-name="info" color="var(--color-blue-standard)"></icon-display>
-                              <p>Primary</p>
-                            </div>
-                            <div class="flex items-center gap-2">
-                              <icon-display icon-name="info" color="var(--color-blue-light)"></icon-display>
-                              <p>Default</p>
-                            </div>
-                            <div class="flex items-center gap-2">
-                              <icon-display icon-name="check_circle" color="var(--color-success)"></icon-display>
-                              <p>Success</p>
-                            </div>
-                            <div class="flex items-center gap-2">
-                              <icon-display icon-name="warning" color="var(--color-alert)"></icon-display>
-                              <p>Alert</p>
-                            </div>
-                            <div class="flex items-center gap-2">
-                              <icon-display icon-name="error" color="var(--color-danger)"></icon-display>
-                              <p>Danger</p>
-                            </div>
-                          </div>
+                          <h3>Styles</h3>
+                          <p class="mt-2">We use two main icon styles: Rounded and Outline.</p>
                         </div>
                       </div>
                     </design-section>
-                    
-                    <design-section id="user-feedback" title-text="User Feedback Guidelines" description-text="This section outlines guidelines for providing clear and contextual feedback to users. We cover messages for success, error, and information, ensuring they are helpful and consistent with the dark mode theme.">
+
+                    <design-section id="user-feedback" title-text="User Feedback Guidelines" description-text="This section outlines guidelines for providing clear and contextual feedback to users for success, error, and information.">
                       <div class="mt-8 space-y-12">
                         <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-3">
                           <div class="md:col-span-1">
-                            <h3 class="text-lg font-bold text-[var(--color-white)]">Success Messages</h3>
-                            <p class="mt-1 text-sm text-[var(--color-blue-light)]">Confirm that a user's action was completed successfully. Use a positive tone and provide brief, reassuring feedback.</p>
+                            <h3>Success Messages</h3>
+                            <p class="mt-1">Confirm that a user's action was completed successfully.</p>
                           </div>
                           <div class="flex w-full flex-col gap-6 rounded-lg bg-[var(--color-background)] p-8 md:col-span-2">
                             <user-feedback-message message-type="success" title-text="Action Confirmed" description-text="Your profile has been updated successfully."></user-feedback-message>
-                            <user-feedback-message message-type="success" title-text="File Uploaded" description-text="The document 'report.pdf' has been uploaded."></user-feedback-message>
-                          </div>
-                        </div>
-                        <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-3">
-                          <div class="md:col-span-1">
-                            <h3 class="text-lg font-bold text-[var(--color-white)]">Error Messages</h3>
-                            <p class="mt-1 text-sm text-[var(--color-blue-light)]">Inform the user that something went wrong. Be clear about the problem and suggest a solution or next step.</p>
-                          </div>
-                          <div class="flex w-full flex-col gap-6 rounded-lg bg-[var(--color-background)] p-8 md:col-span-2">
-                            <user-feedback-message message-type="error" title-text="Validation Failed" description-text="Please enter a valid email address to continue."></user-feedback-message>
-                            <user-feedback-message message-type="error" title-text="Connection Error" description-text="Could not connect to the server. Please check your internet connection and try again."></user-feedback-message>
-                          </div>
-                        </div>
-                        <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-3">
-                          <div class="md:col-span-1">
-                            <h3 class="text-lg font-bold text-[var(--color-white)]">Warning &amp; Informational Messages</h3>
-                            <p class="mt-1 text-sm text-[var(--color-blue-light)]">Provide helpful information or alerts about potential issues. Use a neutral or cautionary tone.</p>
-                          </div>
-                          <div class="flex w-full flex-col gap-6 rounded-lg bg-[var(--color-background)] p-8 md:col-span-2">
-                            <user-feedback-message message-type="warning" title-text="Unsaved Changes" description-text="You have unsaved changes. Are you sure you want to leave this page?"></user-feedback-message>
-                            <user-feedback-message message-type="info" title-text="System Update" description-text="A new update will be installed automatically tonight."></user-feedback-message>
                           </div>
                         </div>
                       </div>
                     </design-section>
 
-                    <design-section id="tabs-selectors" title-text="Tabs & Selectors" description-text="Tabs and selectors are used for navigating between different views or filtering content within the same context. Clear visual states and intuitive behavior are key to their effectiveness.">
+                    <design-section id="tabs-selectors" title-text="Tabs & Selectors" description-text="Tabs and selectors are used for navigating between different views or filtering content.">
                       <div class="mt-8 space-y-12">
                         <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-3">
                           <div class="md:col-span-1">
-                            <h3 class="text-lg font-bold text-[var(--color-white)]">Primary Navigation Tabs</h3>
-                            <p class="mt-1 text-sm text-[var(--color-blue-light)]">Used for main section navigation. The active tab is highlighted with a bottom border and a bolder text color.</p>
+                            <h3>Primary Navigation Tabs</h3>
+                            <p class="mt-1">Used for main section navigation.</p>
                           </div>
                           <div class="w-full rounded-lg bg-[var(--color-background)] p-8 md:col-span-2">
                             <primary-tabs></primary-tabs>
@@ -236,8 +109,8 @@
                         </div>
                         <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-3">
                           <div class="md:col-span-1">
-                            <h3 class="text-lg font-bold text-[var(--color-white)]">Filter Selectors (Pills)</h3>
-                            <p class="mt-1 text-sm text-[var(--color-blue-light)]">Used for filtering content like lists or galleries. The active selector has a solid background color, while inactive ones have a subtle background on hover.</p>
+                            <h3>Filter Selectors (Pills)</h3>
+                            <p class="mt-1">Used for filtering content like lists or galleries.</p>
                           </div>
                           <div class="flex w-full flex-wrap items-center justify-center gap-4 rounded-lg bg-[var(--color-background)] p-8 md:col-span-2">
                             <pill-button active>All</pill-button>
@@ -246,87 +119,28 @@
                             <pill-button disabled>Archived</pill-button>
                           </div>
                         </div>
-                        <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-3">
-                          <div class="md:col-span-1">
-                            <h3 class="text-lg font-bold text-[var(--color-white)]">Behavior and Content Display</h3>
-                            <p class="mt-1 text-sm text-[var(--color-blue-light)]">When a tab or selector is activated, the corresponding content area is displayed. This provides a seamless way to switch between different content views without a full page reload.</p>
-                          </div>
-                          <div class="w-full rounded-lg bg-[var(--color-background)] p-8 md:col-span-2">
-                            <div class="w-full">
-                              <primary-tabs></primary-tabs>
-                              <div class="mt-6 rounded-lg border border-[var(--color-blue-enterprise)] bg-[var(--color-blue-dark)] p-6">
-                                <h4 class="text-lg font-bold text-white">Content for "View" Tab</h4>
-                                <p class="mt-2 text-sm text-[var(--color-blue-light)]">This is the content displayed when the 'View' tab is active. Clicking on another tab would dynamically change this content area.</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </design-section>
                     
-                    <design-section id="loaders-spinners" title-text="Loaders & Spinners" description-text="Loaders and spinners provide visual feedback to users when content is being loaded or processed. They are crucial for managing user expectations and reducing perceived wait times.">
+                    <design-section id="loaders-spinners" title-text="Loaders & Spinners" description-text="Loaders and spinners provide visual feedback to users when content is being loaded or processed.">
                       <div class="mt-8 space-y-12">
                         <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-3">
                           <div class="md:col-span-1">
-                            <h3 class="text-lg font-bold text-[var(--color-white)]">Circular Spinners</h3>
-                            <p class="mt-1 text-sm text-[var(--color-blue-light)]">Used for indeterminate loading, such as initial page loads or content updates where the duration is unknown.</p>
+                            <h3>Circular Spinners</h3>
+                            <p class="mt-1">Used for indeterminate loading.</p>
                           </div>
                           <div class="flex flex-wrap items-center justify-center gap-8 rounded-lg bg-[var(--color-background)] p-8 md:col-span-2">
                             <div class="flex flex-col items-center gap-2">
                               <circular-spinner size="small"></circular-spinner>
-                              <p class="text-xs">Small (24px)</p>
+                              <p>Small</p>
                             </div>
                             <div class="flex flex-col items-center gap-2">
                               <circular-spinner size="medium"></circular-spinner>
-                              <p class="text-xs">Medium (40px)</p>
+                              <p>Medium</p>
                             </div>
                             <div class="flex flex-col items-center gap-2">
                               <circular-spinner size="large"></circular-spinner>
-                              <p class="text-xs">Large (64px)</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-3">
-                          <div class="md:col-span-1">
-                            <h3 class="text-lg font-bold text-[var(--color-white)]">Linear Loaders</h3>
-                            <p class="mt-1 text-sm text-[var(--color-blue-light)]">Used for determinate loading processes, such as file uploads or progress bars, where the completion percentage is known.</p>
-                          </div>
-                          <div class="flex w-full flex-col gap-8 rounded-lg bg-[var(--color-background)] p-8 md:col-span-2">
-                            <div class="w-full">
-                              <p class="mb-2 text-sm text-white">Indeterminate</p>
-                              <linear-loader type="indeterminate"></linear-loader>
-                            </div>
-                            <div class="w-full">
-                              <p class="mb-2 text-sm text-white">Determinate (75%)</p>
-                              <linear-loader type="determinate" progress="75%"></linear-loader>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-3">
-                          <div class="md:col-span-1">
-                            <h3 class="text-lg font-bold text-[var(--color-white)]">Contextual Usage</h3>
-                            <p class="mt-1 text-sm text-[var(--color-blue-light)]">Apply loaders and spinners in context to provide clear feedback on the status of a process.</p>
-                          </div>
-                          <div class="grid w-full grid-cols-1 gap-8 rounded-lg bg-[var(--color-background)] p-8 md:col-span-2 lg:grid-cols-2">
-                            <div class="flex flex-col items-center justify-center gap-4 rounded-lg border border-[var(--color-blue-enterprise)] p-6 text-center">
-                              <circular-spinner size="medium"></circular-spinner>
-                              <h4 class="font-semibold text-white">Page Loading</h4>
-                              <p class="text-xs text-[var(--color-blue-light)]/80">Use a centered spinner for initial page loads.</p>
-                            </div>
-                            <div class="flex flex-col items-center justify-center gap-4 rounded-lg border border-[var(--color-blue-enterprise)] p-6 text-center">
-                              <button class="flex h-[48px] w-40 items-center justify-center rounded-lg bg-[var(--color-blue-standard)] text-base font-bold text-white" disabled="">
-                                <circular-spinner size="small" color="var(--color-white)"></circular-spinner>
-                              </button>
-                              <h4 class="font-semibold text-white">Form Submission</h4>
-                              <p class="text-xs text-[var(--color-blue-light)]/80">Indicate processing within a button.</p>
-                            </div>
-                            <div class="relative flex min-h-[150px] w-full flex-col items-center justify-center gap-4 rounded-lg border border-[var(--color-blue-enterprise)] p-6 text-center lg:col-span-2">
-                              <div class="absolute inset-0 z-10 flex flex-col items-center justify-center rounded-lg bg-black/50 backdrop-blur-sm">
-                                <circular-spinner size="medium" color="var(--color-blue-light)"></circular-spinner>
-                                <p class="mt-2 text-sm text-white">Updating...</p>
-                              </div>
-                              <h4 class="font-semibold text-white">Content Update</h4>
-                              <p class="text-[var(--color-blue-light)]/80">Overlay a section to show content is refreshing.</p>
+                              <p>Large</p>
                             </div>
                           </div>
                         </div>

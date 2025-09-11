@@ -66,3 +66,36 @@ Este documento dinâmico rastreia nosso progresso e define as próximas priorida
 | Componente: Checkbox           | 💡 Backlog | 🔥 Altíssima | Sprint 8   |
 | Componente: Radio Button       | 💡 Backlog | 🔥 Altíssima | Sprint 8   |
 | Componente: Interruptor (Toggle) | 💡 Backlog | 🔼 Alta    | Sprint 8   |
+
+---
+
+## Anexo: Estrutura Atual de Arquivos
+. ├── CHANGELOG.md
+  ├── README.md 
+  ├── blueprint.md 
+  ├── components 
+  │ ├── BadgeTag.js 
+  │ ├── CircularSpinner.js 
+  │ ├── ColorSwatch.js 
+  │ ├── ContentCard.js 
+  │ ├── DesignSection.js 
+  │ ├── IconDisplay.js 
+  │ ├── LayoutPrinciple.js 
+  │ ├── LinearLoader.js 
+  │ ├── PageHeader.js 
+  │ ├── PillButton.js 
+  │ ├── PrimaryTabs.js 
+  │ ├── TypographyScale.js 
+  │ └── UserFeedbackMessage.js 
+  ├── design-system.html 
+  ├── docs 
+  │ ├── design-system-best-practices.md 
+  │ ├── roadmap.md 
+  │ └── typography.md 
+  ├── firebase-debug.log 
+  ├── index.html 
+  ├── main.js 
+  ├── mlvdsprototype.code-workspace 
+  ├── style.css 
+  └── styles 
+  └── layout.css

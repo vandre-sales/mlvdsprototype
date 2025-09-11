@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Prot&oacute;tipo Visual do Design System &lpar;index-prototype&period;md&rpar;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="protótipo-visual-do-design-system-index-prototypemd">Protótipo Visual do Design System (<a href="http://index-prototype.html">index-prototype.md</a>)</h1>
+<blockquote>
+<p><strong>Guia para Designers:</strong> Este documento é uma tradução da visão estética e funcional do <code>index.html</code> para uma narrativa descritiva. Use-o como um &quot;briefing&quot; para entender a intenção por trás de cada pixel, cor e interação. Ele é a única fonte da verdade para a reconstrução visual da página.</p>
+</blockquote>
+<hr>
+<h3 id="componente-cabeçalho-principal"><code>[Componente: Cabeçalho Principal]</code></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> O cabeçalho é a nossa bússola constante. Ele flutua sobre o conteúdo, oferecendo acesso rápido à navegação sem nunca sair do caminho. A sensação é de leveza e modernidade.</p>
+<p><strong>Estética e Comportamento:</strong></p>
+<ul>
+<li><strong>Posicionamento:</strong> É um elemento <code>sticky</code>, fixo no topo da página. Ao rolar, ele permanece visível.</li>
+<li><strong>Fundo e Efeito:</strong> O fundo não é sólido. Ele usa a cor <code>var(--color-background)</code> com 80% de opacidade e um efeito <code>backdrop-blur</code>. O resultado é um vidro fosco e translúcido, que permite ver a cor do conteúdo passando por baixo, mas sem perder o foco.</li>
+<li><strong>Estrutura:</strong> Uma borda inferior sutil (<code>--color-blue-enterprise</code>) ancora o cabeçalho visualmente, separando-o do conteúdo principal.</li>
+<li><strong>Interatividade:</strong> Os links de navegação (<code>&lt;a&gt;</code>) usam a cor <code>var(--color-blue-light)</code>. Ao passar o mouse (<code>:hover</code>), eles se iluminam suavemente para <code>var(--color-white)</code>, fornecendo um feedback claro e elegante. O botão de ajuda tem um efeito de <code>hover</code> sutil, escurecendo seu fundo para <code>var(--color-blue-enterprise)</code>.</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Logo &amp; Título</th>
+<th style="text-align:left">Navegação Principal</th>
+<th style="text-align:left">Ações do Usuário</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">💠 <strong>Design System</strong></td>
+<td style="text-align:left"><code>Overview</code> <code>Components</code> <code>Typography</code> <code>UX Principles</code> <code>UI Guidelines</code></td>
+<td style="text-align:left"><code>[Ícone: help]</code> <code>[Avatar]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="seção-título-principal--hero"><strong><code>[Seção: Título Principal / Hero]</code></strong></h2>
+<blockquote>
+<p><strong>Visão Geral:</strong> A primeira impressão. Esta seção é um contêiner que age como um palco para o título principal, dando-lhe peso e importância.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Contêiner (<code>.section-container</code>):</strong> A seção inteira é envolvida por um contêiner com cantos suavemente arredondados (<code>0.5rem</code>), uma borda delicada (<code>1px solid var(--color-blue-enterprise)</code>) e um fundo <code>var(--color-blue-dark)</code>. A sensação é de um &quot;painel de controle&quot;.</li>
+<li><strong>Título (<code>&lt;h1&gt;</code>):</strong> O título &quot;Design System&quot; é o protagonista. Ele usa a cor de destaque <code>var(--color-blue-standard)</code> e uma fonte com peso <code>black</code> (900), com um <code>tracking</code> (espaçamento entre letras) ligeiramente mais apertado para criar um bloco de texto denso e impactante.</li>
+<li><strong>Descrição (<code>&lt;p&gt;</code>):</strong> O parágrafo de apoio é maior que o texto do corpo (<code>text-lg</code>), dando-lhe importância, mas usa a cor padrão <code>var(--color-blue-light)</code>.</li>
+</ul>
+</blockquote>
+<h1 id="design-system"><strong>Design System</strong></h1>
+<p>A comprehensive design system for our SaaS platform, ensuring consistency and efficiency in design and development.</p>
+<hr>
+<h2 id="seção-tipografia"><strong><code>[Seção: Tipografia]</code></strong></h2>
+<blockquote>
+<p><strong>Visão Geral:</strong> Esta seção não é apenas uma lista, é uma demonstração viva da nossa hierarquia de texto. Cada item deve respirar e mostrar seu propósito.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Layout de Exibição:</strong> Cada nível de tipografia (H1, H2, etc.) é apresentado em uma grade. À esquerda, uma pequena tag (<code>&lt;span class=&quot;tag&quot;&gt;</code>) identifica o nível. À direita, o texto de exemplo real. Isso cria um ritmo visual claro.</li>
+<li><strong>Exemplo vs. Realidade:</strong> O texto do título (&quot;Montserrat Black 48px&quot;) é renderizado com a própria fonte que descreve. O texto de exemplo abaixo dele usa a mesma fonte, mas com uma opacidade de 70%, tornando-o visualmente secundário e servindo como um &quot;eco&quot; do estilo.</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Tag</th>
+<th style="text-align:left">Demonstração Visual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>H1</strong></td>
+<td style="text-align:left"><strong><span style="font-size: 48px; font-weight: 900;">Montserrat Black 48px</span></strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>H2</strong></td>
+<td style="text-align:left"><strong><span style="font-size: 36px; font-weight: 700;">Montserrat Bold 36px</span></strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>H3</strong></td>
+<td style="text-align:left"><strong><span style="font-size: 30px; font-weight: 700;">Montserrat Bold 30px</span></strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>H4</strong></td>
+<td style="text-align:left"><strong><span style="font-size: 24px; font-weight: 700;">Montserrat Bold 24px</span></strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>H5</strong></td>
+<td style="text-align:left"><strong><span style="font-size: 20px; font-weight: 500;">Montserrat Medium 20px</span></strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>H6</strong></td>
+<td style="text-align:left"><strong><span style="font-size: 18px; font-weight: 500;">Montserrat Medium 18px</span></strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Body</strong></td>
+<td style="text-align:left"><strong><span style="font-size: 16px; font-weight: 400;">Montserrat Regular 16px</span></strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="seção-visual-hierarchy--layout"><strong><code>[Seção: Visual Hierarchy &amp; Layout]</code></strong></h2>
+<blockquote>
+<p><strong>Visão Geral:</strong> Esta seção é uma aula visual sobre como organizar a informação. Ela é dividida em três partes: os princípios teóricos, a estrutura de grade e um exemplo prático.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Layout da Seção:</strong> Cada uma das três sub-seções (<code>Layout Principles</code>, <code>Grid System</code>, <code>Layout Example</code>) segue um padrão de grade de duas colunas em telas maiores. A coluna da esquerda (1/3 da largura) contém o título (<code>&lt;h3&gt;</code>) e a descrição. A coluna da direita (2/3 da largura) contém a demonstração visual.</li>
+</ul>
+</blockquote>
+<h3 id="layout-principles"><strong>Layout Principles</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> Os quatro princípios fundamentais são apresentados como &quot;cards&quot; individuais, dando a cada um seu próprio espaço e importância.</p>
+<p><strong>Estética do Card:</strong></p>
+<ul>
+<li><strong>Estrutura:</strong> Cada card tem uma borda (<code>--color-blue-enterprise</code>), um fundo (<code>--color-blue-dark</code>) e cantos arredondados.</li>
+<li><strong>Conteúdo:</strong> Dentro do card, a hierarquia é clara:
+<ol>
+<li>Um ícone grande (<code>text-3xl</code>) e colorido (<code>--color-blue-standard</code>) no topo.</li>
+<li>Um título (<code>&lt;h4&gt;</code>) em <code>font-semibold</code> e <code>text-white</code>.</li>
+<li>Um parágrafo descritivo (<code>&lt;p&gt;</code>) em <code>text-sm</code>.</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Ícone</th>
+<th style="text-align:left">Princípio</th>
+<th style="text-align:left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>space_dashboard</code></td>
+<td style="text-align:left"><strong>Whitespace</strong></td>
+<td style="text-align:left">Use ample whitespace to reduce clutter and improve readability.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>align_horizontal_left</code></td>
+<td style="text-align:left"><strong>Alignment</strong></td>
+<td style="text-align:left">Align elements to create a sense of order and connection.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>group_work</code></td>
+<td style="text-align:left"><strong>Proximity</strong></td>
+<td style="text-align:left">Group related elements together to imply a relationship.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>repeat</code></td>
+<td style="text-align:left"><strong>Repetition</strong></td>
+<td style="text-align:left">Repeat design elements to create consistency and rhythm.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grid-system"><strong>Grid System</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> Uma demonstração visual e inequívoca do nosso sistema de grid de 12 colunas.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Visualização:</strong> A grade é representada por uma série de caixas (<code>&lt;div&gt;</code>) com cantos arredondados e um fundo semi-transparente (<code>--color-blue-enterprise</code> com 50% de opacidade).</li>
+<li><strong>Clareza:</strong> Cada caixa contém um texto que descreve sua largura em colunas (ex: &quot;col-12&quot;, &quot;col-6&quot;), tornando o sistema auto-explicativo.</li>
+</ul>
+</blockquote>
+<pre><code>[ col-12 ]
+[ col-6 ][ col-6 ]
+[ col-4 ][ col-4 ][ col-4 ]
+[ col-3 ][ col-3 ][ col-3 ][ col-3 ]
+</code></pre>
+<h3 id="layout-example"><strong>Layout Example</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> Um wireframe de baixa fidelidade que mostra como os princípios e a grade se unem para formar um layout de página coeso.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Estrutura:</strong> O exemplo mostra um layout de duas colunas principais: uma sidebar à esquerda (1/4 da largura) e uma área de conteúdo principal à direita (3/4 da largura).</li>
+<li><strong>Wireframe:</strong> Todos os elementos são representados por caixas com cantos arredondados e a cor de fundo <code>--color-blue-dark</code>, simulando blocos de conteúdo sem distrair com detalhes.</li>
+</ul>
+</blockquote>
+<pre><code>+--------------------------------------------------+
+| +----------+ +---------------------------------+ |
+| |          | | [Bloco de Conteúdo]             | |
+| |          | |                                 | |
+| | Sidebar  | | [Bloco de Conteúdo Maior]       | |
+| | (1/4)    | |                                 | |
+| |          | | +---------------+ +-------------+ |
+| |          | | | Botão 1       | | Botão 2     | |
+| |          | | +---------------+ +-------------+ |
+| +----------+ +---------------------------------+ |
+|                                                  |
+| +----------+ +----------+ +----------+           |
+| | Card 1   | | Card 2   | | Card 3   |           |
+| +----------+ +----------+ +----------+           |
++--------------------------------------------------+
+</code></pre>
+<hr>
+<h2 id="seção-paleta-de-cores"><strong><code>[Seção: Paleta de Cores]</code></strong></h2>
+<blockquote>
+<p><strong>Visão Geral:</strong> Uma galeria visual das nossas cores. Cada cor é apresentada como uma amostra física, não apenas como um código.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Cartão de Cor:</strong> Cada cor é exibida em um &quot;cartão&quot;. O topo do cartão é um retângulo alto e arredondado (<code>rounded-lg</code>) preenchido com a cor real. Abaixo, em um fundo neutro, estão as informações em uma hierarquia clara:
+<ol>
+<li>Nome da Cor (ex: &quot;Blue Standard&quot;) - <code>text-base</code>, <code>font-semibold</code>, <code>text-white</code></li>
+<li>Variável CSS (ex: &quot;--color-blue-standard&quot;) - <code>text-sm</code>, <code>text-blue-light</code></li>
+<li>Código Hex (ex: &quot;#4b9cd6&quot;) - <code>text-xs</code>, <code>text-blue-light</code> com 70% de opacidade.</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li><code>[Swatch: --color-blue-standard]</code> <strong>Blue Standard</strong> <code>#4b9cd6</code></li>
+<li><code>[Swatch: --color-blue-enterprise]</code> <strong>Blue Enterprise</strong> <code>#1a4f75</code></li>
+<li><code>[Swatch: --color-blue-light]</code> <strong>Blue Light</strong> <code>#dbebf6</code></li>
+<li><code>[Swatch: --color-blue-dark]</code> <strong>Blue Dark</strong> <code>#081521</code></li>
+<li><code>[Swatch: --color-background]</code> <strong>Background</strong> <code>#112d47</code></li>
+<li><code>[Swatch: --color-success]</code> <strong>Success</strong> <code>#2eb23c</code></li>
+<li><code>[Swatch: --color-alert]</code> <strong>Alert</strong> <code>#f4ac45</code></li>
+<li><code>[Swatch: --color-danger]</code> <strong>Danger</strong> <code>#eb5757</code></li>
+<li><code>[Swatch: --color-white]</code> <strong>White</strong> <code>#ffffff</code></li>
+</ul>
+<hr>
+<h2 id="seção-iconografia"><strong><code>[Seção: Iconografia]</code></strong></h2>
+<blockquote>
+<p><strong>Visão Geral:</strong> Uma especificação clara de como os ícones devem ser usados para comunicação visual, cobrindo os estilos, tamanhos e cores permitidos.</p>
+</blockquote>
+<h3 id="styles"><strong>Styles</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> Apresenta os dois estilos de ícone permitidos: <code>Rounded</code> (preenchido) e <code>Outline</code> (contornado), explicando seu uso semântico.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Contêiner de Exemplo:</strong> Cada estilo é exibido em seu próprio card, com um título (<code>&lt;h4&gt;</code>) e uma descrição.</li>
+<li><strong>Uso Semântico:</strong>
+<ul>
+<li><strong>Rounded:</strong> Para ações primárias e estados preenchidos/ativos. A aparência é mais &quot;sólida&quot; e chama mais atenção.</li>
+<li><strong>Outline:</strong> Para ações secundárias e estados inativos. A aparência é mais leve.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Estilo</th>
+<th style="text-align:left">Exemplo Visual</th>
+<th style="text-align:left">Uso Recomendado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Rounded</strong></td>
+<td style="text-align:left"><code>[Ícone: home (preenchido)]</code> <code>[Ícone: check_circle (preenchido)]</code></td>
+<td style="text-align:left">Ações primárias, estados ativos.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Outline</strong></td>
+<td style="text-align:left"><code>[Ícone: home (contornado)]</code> <code>[Ícone: favorite (contornado)]</code></td>
+<td style="text-align:left">Ações secundárias, estados inativos.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sizing"><strong>Sizing</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> Define os tamanhos padronizados para ícones para manter a consistência rítmica na interface.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Demonstração:</strong> Os tamanhos são exibidos lado a lado para fácil comparação visual, cada um com seu respectivo rótulo (ex: &quot;20px&quot;, &quot;24px (Default)&quot;).</li>
+</ul>
+</blockquote>
+<ul>
+<li><code>[Ícone: visibility (20px)]</code> 20px</li>
+<li><code>[Ícone: visibility (24px)]</code> 24px (Default)</li>
+<li><code>[Ícone: visibility (48px)]</code> 48px</li>
+</ul>
+<h3 id="color"><strong>Color</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> Regras para a aplicação de cores nos ícones, garantindo que eles se alinhem com a paleta de cores e transmitam o significado correto.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Demonstração:</strong> Cada ícone de exemplo é exibido com sua cor semântica e um rótulo correspondente.</li>
+</ul>
+</blockquote>
+<ul>
+<li><code>[Ícone: info (cor: --color-blue-standard)]</code> Primary</li>
+<li><code>[Ícone: info (cor: --color-blue-light)]</code> Default</li>
+<li><code>[Ícone: check_circle (cor: --color-success)]</code> Success</li>
+<li><code>[Ícone: warning (cor: --color-alert)]</code> Alert</li>
+<li><code>[Ícone: error (cor: --color-danger)]</code> Danger</li>
+</ul>
+<hr>
+<h2 id="seção-user-feedback-guidelines"><strong><code>[Seção: User Feedback Guidelines]</code></strong></h2>
+<blockquote>
+<p><strong>Visão Geral:</strong> Define o padrão visual para comunicação de feedback ao usuário. Cada tipo de mensagem (sucesso, erro, etc.) é um componente visualmente distinto para ser instantaneamente reconhecível.</p>
+<p><strong>Estética do Componente de Mensagem:</strong></p>
+<ul>
+<li><strong>Estrutura:</strong> É um card com uma borda colorida que corresponde ao seu status (ex: borda verde para sucesso).</li>
+<li><strong>Layout Interno:</strong> Um layout de duas colunas:
+<ol>
+<li><strong>Ícone:</strong> À esquerda, um ícone grande, preenchido (<code>Rounded</code>) e colorido com a cor do status.</li>
+<li><strong>Texto:</strong> À direita, um título (<code>&lt;h4&gt;</code>) em <code>font-semibold</code> e uma descrição em <code>text-sm</code>.</li>
+</ol>
+</li>
+<li><strong>Sombra:</strong> Uma sombra sutil (<code>shadow-lg</code>) eleva o componente da página, dando-lhe proeminência.</li>
+</ul>
+</blockquote>
+<h3 id="success-messages"><strong>Success Messages</strong></h3>
+<blockquote>
+<p>Usado para confirmar que uma ação foi concluída com sucesso.</p>
+</blockquote>
+<p><code>[Ícone: check_circle (verde)]</code> <strong>Action Confirmed</strong>
+Your profile has been updated successfully.</p>
+<h3 id="error-messages"><strong>Error Messages</strong></h3>
+<blockquote>
+<p>Usado para informar que algo deu errado, sugerindo uma solução.</p>
+</blockquote>
+<p><code>[Ícone: error (vermelho)]</code> <strong>Validation Failed</strong>
+Please enter a valid email address to continue.</p>
+<h3 id="warning--informational-messages"><strong>Warning &amp; Informational Messages</strong></h3>
+<blockquote>
+<p>Usado para alertas ou informações úteis.</p>
+</blockquote>
+<p><code>[Ícone: warning (amarelo)]</code> <strong>Unsaved Changes</strong>
+You have unsaved changes. Are you sure you want to leave this page?</p>
+<p><code>[Ícone: info (azul)]</code> <strong>System Update</strong>
+A new update will be installed automatically tonight.</p>
+<hr>
+<h2 id="seção-tabs--selectors"><strong><code>[Seção: Tabs &amp; Selectors]</code></strong></h2>
+<blockquote>
+<p><strong>Visão Geral:</strong> Componentes essenciais para navegação e filtragem dentro de uma mesma página. O feedback visual claro sobre o estado (ativo, inativo, hover) é a prioridade máxima.</p>
+</blockquote>
+<h3 id="primary-navigation-tabs"><strong>Primary Navigation Tabs</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> Usado para a navegação principal de uma seção. O design é minimalista, focado em uma linha inferior que indica o estado ativo.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Estrutura:</strong> Uma barra horizontal com uma borda inferior (<code>--color-blue-enterprise</code>) define a área das tabs.</li>
+<li><strong>Tab Ativa:</strong> Se destaca das demais. O texto é mais pesado (<code>font-semibold</code>) e branco (<code>--color-white</code>). Uma borda inferior de <code>2px</code> na cor <code>--color-blue-standard</code> ancora a tab, conectando-a visualmente ao conteúdo que ela revela.</li>
+<li><strong>Tab Inativa:</strong> É mais sutil. O texto é mais leve (<code>font-medium</code>) e usa a cor <code>--color-blue-light</code>. A borda inferior é transparente.</li>
+<li><strong>Hover (Inativa):</strong> Ao passar o mouse, a borda inferior da tab inativa aparece sutilmente com a cor <code>--color-blue-light</code>, e o texto se ilumina para <code>white</code>, sinalizando que é um alvo clicável.</li>
+</ul>
+</blockquote>
+<p><code>[Tab: Profile (Ativa)]</code> <code>[Tab: Team]</code> <code>[Tab: Projects]</code> <code>[Tab com Ícone: Settings]</code></p>
+<h3 id="filter-selectors-pills"><strong>Filter Selectors (Pills)</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> Botões em formato de pílula usados para filtrar conjuntos de dados. A sensação é tátil e imediata.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Formato:</strong> Totalmente arredondado (<code>rounded-full</code>).</li>
+<li><strong>Estado Ativo:</strong> Fundo sólido com a cor <code>--color-blue-standard</code> e texto branco em <code>font-semibold</code>. A aparência é &quot;pressionada&quot; e proeminente.</li>
+<li><strong>Estado Inativo:</strong> Fundo transparente e texto <code>--color-blue-light</code>.</li>
+<li><strong>Hover (Inativo):</strong> O fundo se preenche sutilmente com a cor <code>--color-blue-enterprise</code>, indicando que pode ser ativado.</li>
+<li><strong>Estado Desativado:</strong> Mantém o fundo transparente, mas o texto tem sua opacidade reduzida para 50%, e o cursor muda para <code>not-allowed</code>.</li>
+</ul>
+</blockquote>
+<p><code>[Pill: All (Ativa)]</code> <code>[Pill: Active]</code> <code>[Pill: Completed]</code> <code>[Pill: Archived (Desativada)]</code></p>
+<hr>
+<h2 id="seção-loaders--spinners"><strong><code>[Seção: Loaders &amp; Spinners]</code></strong></h2>
+<blockquote>
+<p><strong>Visão Geral:</strong> Feedback visual essencial para gerenciar a expectativa do usuário durante operações assíncronas. O movimento deve ser suave e contínuo.</p>
+</blockquote>
+<h3 id="circular-spinners"><strong>Circular Spinners</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> Usado para carregamentos de duração indeterminada.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Animação:</strong> Um anel que gira infinitamente (<code>animate-spin</code>). O anel não é completo; um segmento é transparente (<code>border-t-transparent</code>), criando a ilusão de movimento.</li>
+<li><strong>Cores:</strong> A cor do anel é <code>var(--color-blue-standard)</code>.</li>
+<li><strong>Tamanhos:</strong> Apresentado em três tamanhos distintos para diferentes contextos:
+<ul>
+<li><strong>Small (24px):</strong> Borda de <code>2px</code>. Ideal para dentro de botões.</li>
+<li><strong>Medium (40px):</strong> Borda de <code>4px</code>. Padrão para a maioria dos casos.</li>
+<li><strong>Large (64px):</strong> Borda de <code>4px</code>. Para carregamento de página inteira ou seções grandes.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><code>[Spinner: Pequeno]</code> <code>[Spinner: Médio]</code> <code>[Spinner: Grande]</code></p>
+<h3 id="linear-loaders"><strong>Linear Loaders</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> Usado para processos com progresso definido (ex: uploads) ou como um indicador de atividade geral no topo de uma seção.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Contêiner:</strong> Uma barra fina, com cantos totalmente arredondados e um fundo <code>var(--color-blue-enterprise)</code>.</li>
+<li><strong>Barra de Progresso:</strong> A barra que se preenche usa a cor <code>var(--color-blue-standard)</code>.</li>
+<li><strong>Indeterminado:</strong> A barra de progresso tem uma largura fixa (ex: 50%) e anima infinitamente da esquerda para a direita, dando uma sensação de atividade contínua.</li>
+<li><strong>Determinado:</strong> A barra de progresso tem sua largura definida por uma porcentagem, preenchendo o contêiner de forma estática.</li>
+</ul>
+</blockquote>
+<p><strong>Indeterminado:</strong> <code>[ Barra de progresso animada ]</code>
+<strong>Determinado (75%):</strong> <code>[ Barra de progresso preenchida em 75% ]</code></p>
+<hr>
+<h2 id="seção-cards--content-layouts"><strong><code>[Seção: Cards &amp; Content Layouts]</code></strong></h2>
+<blockquote>
+<p><strong>Visão Geral:</strong> Cards são os blocos de construção fundamentais para a exibição de conteúdo. Eles são versáteis e devem ser estruturados de forma consistente.</p>
+</blockquote>
+<h3 id="card-structure"><strong>Card Structure</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> A anatomia de um card padrão.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Contêiner:</strong> O card padrão tem fundo <code>--color-blue-dark</code>, borda <code>--color-blue-enterprise</code>, e cantos arredondados.</li>
+<li><strong>Divisões:</strong> O conteúdo principal (<code>p-6</code>) é separado da área de ações (<code>px-6 py-4</code>) por uma borda superior.</li>
+<li><strong>Ações:</strong> A área de ações geralmente contém botões de texto, alinhados à esquerda.</li>
+</ul>
+</blockquote>
+<p><strong>Exemplo de Card Padrão:</strong></p>
+<pre><code>+-----------------------------+
+| Título do Card (H4)         |
+|                             |
+| Parágrafo descritivo...     |
+|-----------------------------|
+| [Ação do Card]              |
++-----------------------------+
+</code></pre>
+<h3 id="card-types"><strong>Card Types</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> Diferentes tipos de cards para diferentes casos de uso, organizados em um grid para comparação.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Informativo:</strong> Um card de linha única com um ícone grande em um contêiner colorido (<code>--color-blue-standard</code> com 20% de opacidade) à esquerda e texto à direita.</li>
+<li><strong>Interativo:</strong> Um card padrão, mas a área de ações é empurrada para o final do card e contém botões de ação primários e secundários, alinhados à direita.</li>
+<li><strong>Mídia:</strong> Um card onde a parte superior é dominada por uma imagem (<code>aspect-ratio: 16/9</code>), com o conteúdo textual logo abaixo.</li>
+</ul>
+</blockquote>
+<ul>
+<li><code>[Card Informativo com Ícone]</code></li>
+<li><code>[Card Interativo com Botões no Rodapé]</code></li>
+<li><code>[Card com Imagem no Topo]</code></li>
+</ul>
+<h3 id="responsive-layouts"><strong>Responsive Layouts</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> Demonstra como os cards se comportam em um layout de grid responsivo.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Grid:</strong> Os cards são organizados em um grid que se adapta, quebrando de 3 colunas em telas grandes para 2 e depois 1 coluna em telas menores.</li>
+<li><strong>Card Largo:</strong> O exemplo inclui um card que ocupa duas colunas (<code>sm:col-span-2</code>) para demonstrar layouts mais complexos.</li>
+</ul>
+</blockquote>
+<p><code>[Card 1]</code> <code>[Card 2]</code> <code>[Card 3]</code>
+<code>[  Card 4 (Largo)  ]</code> <code>[Card 5]</code></p>
+<hr>
+<h2 id="seção-badges--tags"><strong><code>[Seção: Badges &amp; Tags]</code></strong></h2>
+<blockquote>
+<p><strong>Visão Geral:</strong> Pequenos elementos de UI para destacar informações de forma concisa, como status, categorias ou contadores.</p>
+</blockquote>
+<h3 id="styles-and-colors"><strong>Styles and Colors</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> Os badges usam cores para transmitir significado.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Default:</strong> Fundo sólido <code>--color-blue-enterprise</code>.</li>
+<li><strong>Semânticos (Success, Warning, Danger):</strong> Fundo translúcido (cor semântica com 20% de opacidade) e texto na cor semântica correspondente.</li>
+<li><strong>Formato:</strong> Podem ser <code>rounded-md</code> (padrão) ou <code>rounded-full</code> (pill).</li>
+</ul>
+</blockquote>
+<ul>
+<li><code>[Badge: Default]</code></li>
+<li><code>[Badge: Success]</code></li>
+<li><code>[Badge: Warning]</code></li>
+<li><code>[Badge: Danger]</code></li>
+<li><code>[Badge: Pill]</code></li>
+</ul>
+<h3 id="sizing-1"><strong>Sizing</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> Três tamanhos distintos para diferentes contextos.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Small:</strong> <code>10px</code> de texto.</li>
+<li><strong>Medium:</strong> <code>text-xs</code> (12px).</li>
+<li><strong>Large:</strong> <code>text-sm</code> (14px).</li>
+</ul>
+</blockquote>
+<p><code>[Badge: Pequeno]</code> <code>[Badge: Médio]</code> <code>[Badge: Grande]</code></p>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> Exemplos práticos de como os badges são usados.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Status:</strong> Usam o formato &quot;pill&quot; com um ícone para clareza visual.</li>
+<li><strong>Categorias:</strong> Usam o formato padrão, retangular.</li>
+<li><strong>Contadores:</strong> Um badge especial, geralmente redondo e com uma cor chamativa (<code>--color-danger</code> ou <code>--color-blue-standard</code>), sobreposto a um ícone.</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Status:</strong> <code>[Ícone] Active</code></li>
+<li><strong>Categorias:</strong> <code>Design</code> <code>Development</code></li>
+<li><strong>Contadores:</strong> <code>[Ícone: notifications]</code> <code>[Contador: 3]</code></li>
+</ul>
+<hr>
+<h2 id="seção-form-components"><strong><code>[Seção: Form Components]</code></strong></h2>
+<blockquote>
+<p><strong>Visão Geral:</strong> Especifica a aparência e o comportamento de todos os elementos de entrada de dados para garantir uma experiência de usuário coesa e previsível. A clareza dos estados (normal, focado, erro, sucesso, desativado) é a principal diretriz.</p>
+</blockquote>
+<h3 id="text-input"><strong>Text Input</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> O campo de entrada de texto padrão.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Estrutura:</strong> Um campo com altura generosa (<code>py-3</code>), cantos arredondados e uma borda de <code>2px</code>.</li>
+<li><strong>Estado Padrão:</strong> Fundo <code>--color-blue-dark</code> e borda <code>--color-blue-enterprise</code>.</li>
+<li><strong>Estado de Foco (<code>:focus</code>):</strong> A borda muda para a cor primária <code>--color-blue-standard</code> e um anel de foco sutil (<code>ring-2</code> com a mesma cor e 50% de opacidade) aparece para melhorar a acessibilidade.</li>
+<li><strong>Estado de Erro:</strong> A borda muda para a cor de perigo <code>--color-danger</code>. Um ícone de erro aparece dentro do campo, à direita. Uma mensagem de erro (<code>text-sm</code>, <code>--color-danger</code>) é exibida abaixo do campo.</li>
+<li><strong>Estado de Sucesso:</strong> A borda muda para a cor de sucesso <code>--color-success</code>, e um ícone de sucesso (<code>check_circle</code>) aparece à direita.</li>
+<li><strong>Estado Desativado (<code>:disabled</code>):</strong> O fundo muda para <code>--color-blue-enterprise</code> com 50% de opacidade, a borda permanece a padrão, e o cursor se torna <code>not-allowed</code>.</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>[Label]</strong> <code>[Campo de Texto: Padrão]</code></li>
+<li><strong>[Label (vermelho)]</strong> <code>[Campo de Texto: Erro com Ícone]</code>
+<blockquote>
+<p>Mensagem de erro.</p>
+</blockquote>
+</li>
+<li><strong>[Label (verde)]</strong> <code>[Campo de Texto: Sucesso com Ícone]</code></li>
+<li><strong>[Label (cinza)]</strong> <code>[Campo de Texto: Desativado]</code></li>
+</ul>
+<h3 id="checkboxes--radio-buttons"><strong>Checkboxes &amp; Radio Buttons</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> Controles para seleção de opções.</p>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Estrutura:</strong> O controle (checkbox ou radio) e seu rótulo (<code>&lt;label&gt;</code>) são agrupados. O texto do rótulo fica à direita do controle.</li>
+<li><strong>Estado Não Selecionado:</strong> Fundo <code>--color-blue-dark</code> e borda <code>--color-blue-enterprise</code>.</li>
+<li><strong>Estado Selecionado (<code>:checked</code>):</strong> O fundo muda para a cor primária <code>--color-blue-standard</code>, e a borda também. O ícone de marca (para checkbox) ou o círculo interno (para radio) aparece em branco.</li>
+<li><strong>Estados de Erro/Sucesso:</strong> A cor da borda e do fundo quando selecionado muda para a cor semântica correspondente.</li>
+<li><strong>Estado Desativado:</strong> O fundo fica mais escuro (<code>--color-blue-enterprise</code>/50) e o texto do rótulo fica com 50% de opacidade.</li>
+</ul>
+</blockquote>
+<ul>
+<li><code>[Checkbox]</code> Option 1</li>
+<li><code>[Checkbox (marcado)]</code> Option 2 (Checked)</li>
+<li><code>[Radio]</code> Choice A</li>
+<li><code>[Radio (marcado)]</code> Choice B (Checked)</li>
+</ul>
+<hr>
+<h2 id="seção-botões"><strong><code>[Seção: Botões]</code></strong></h2>
+<blockquote>
+<p><strong>Visão Geral:</strong> Os botões são os pontos de interação primários para o usuário. Eles devem comunicar claramente a ação que executam e fornecer feedback visual imediato. Cada variante de cor tem um propósito semântico específico.</p>
+</blockquote>
+<h3 id="estrutura-e-comportamento-base"><strong>Estrutura e Comportamento Base</strong></h3>
+<blockquote>
+<p><strong>Estética:</strong></p>
+<ul>
+<li><strong>Formato:</strong> Cantos arredondados (<code>rounded-lg</code>) e um preenchimento interno generoso (<code>px-6 py-3</code>) para criar uma área de clique confortável.</li>
+<li><strong>Tipografia:</strong> O texto é sempre em <code>font-bold</code> e <code>text-base</code> para garantir legibilidade e impacto.</li>
+<li><strong>Borda:</strong> Uma borda padrão de <code>2px</code> (<code>.btn</code>) que se torna sólida no hover, aumentando a sensação tátil.</li>
+<li><strong>Ícones:</strong> Podem incluir um ícone (<code>Material Symbols Rounded</code>) à esquerda do texto para reforçar visualmente o propósito da ação.</li>
+</ul>
+<p><strong>Comportamento:</strong></p>
+<ul>
+<li><strong>Hover:</strong> Ao passar o mouse, a cor de fundo clareia sutilmente (<code>hover:bg-opacity-80</code>), indicando interatividade.</li>
+</ul>
+</blockquote>
+<h3 id="variantes-semânticas"><strong>Variantes Semânticas</strong></h3>
+<blockquote>
+<p><strong>Visão Geral:</strong> As cores não são apenas decorativas; elas comunicam a natureza da ação.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Variante</th>
+<th style="text-align:left">Exemplo Visual</th>
+<th style="text-align:left">Uso Recomendado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Primário</strong></td>
+<td style="text-align:left"><code>[Botão: Primary]</code></td>
+<td style="text-align:left">A ação principal e mais importante em uma determinada tela (ex: &quot;Salvar&quot;, &quot;Enviar&quot;). Usa <code>--color-blue-standard</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Sucesso</strong></td>
+<td style="text-align:left"><code>[Botão: Success]</code></td>
+<td style="text-align:left">Para confirmar ações bem-sucedidas ou operações de conclusão (ex: &quot;Confirmar Pagamento&quot;). Usa <code>--color-success</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Perigo</strong></td>
+<td style="text-align:left"><code>[Botão: Danger]</code></td>
+<td style="text-align:left">Para ações destrutivas ou que não podem ser desfeitas (ex: &quot;Deletar&quot;, &quot;Remover Acesso&quot;). Usa <code>--color-danger</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Alerta</strong></td>
+<td style="text-align:left"><code>[Botão: Alert]</code></td>
+<td style="text-align:left">Para ações que exigem cautela ou atenção do usuário antes de prosseguir. Usa <code>--color-alert</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Enterprise</strong></td>
+<td style="text-align:left"><code>[Botão: Enterprise]</code></td>
+<td style="text-align:left">Uma variante de destaque, com fundo branco e texto <code>--color-blue-enterprise</code>, usada para ações especiais ou de nível superior.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote>
+<p>... (O restante do documento continua a partir daqui)</p>
+</blockquote>
+
+            
+            
+        </body>
+        </html>
