@@ -51,8 +51,6 @@ O comando **"Audit"** é a nossa cerimônia oficial para sincronização e verif
 
 Este protocolo garante que nosso fluxo de trabalho seja resiliente, consistente e auditável.
 
----
-
 ### 3. Gestão de Documentos
 
 Para garantir clareza e organização, nossos documentos principais têm papéis bem definidos:
@@ -67,6 +65,13 @@ Para garantir clareza e organização, nossos documentos principais têm papéis
 *   **Documentos "Dinâmicos" (Constantemente atualizados):**
     *   **`docs/roadmap.md`**: É o nosso "Plano de Voo". Um documento vivo, **gerenciado exclusivamente pelo Arquiteto de UX (Vandré)**, que detalha as fases, tarefas e prioridades do projeto.
     *   **`CHANGELOG.md`**: O diário de bordo técnico. É atualizado por mim a cada entrega de funcionalidade ou correção.
+
+### 4. Ambiente de Validação (Fonte da Verdade)
+
+Devido a inconsistências demonstradas pelo renderizador de preview nativo do Firebase Studio, ele **não será considerado uma fonte confiável para validação visual ou funcional.**
+
+*   **A Fonte da Verdade:** A única fonte da verdade para a validação de qualquer implementação é a renderização em um **browser local moderno (ex: Chrome, Firefox, Edge), a ser verificado pelo Arquiteto de UX (Vandré).**
+*   **Protocolo de Confirmação:** O Programador AI (Executor) só considerará uma tarefa como "concluída com sucesso" após receber a confirmação explícita do Arquiteto de UX de que a implementação funciona como esperado em seu browser local.
 
 ---
 

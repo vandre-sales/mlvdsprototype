@@ -1,32 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="color-scheme: dark;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MLVDS</title>
+    <title>MLVDS Component: mlv-button</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="https://unpkg.com/wcag-ui@latest/style.css">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        body { padding: 2rem; }
+        .component-section { margin-bottom: 2rem; }
+        .component-group { display: flex; align-items: center; gap: 1rem; margin-top: 1rem; }
+        h1, h2 { font-family: var(--mlv-font-family-headings); color: var(--mlv-color-ui-text-headings); }
+    </style>
 </head>
 <body>
-    <main style="padding: 2rem;">
-        <h1>MLVDS Foundation Test</h1>
-        <p>These elements are styled by the <strong>wcag-ui</strong> foundation.</p>
+    <main>
+        <h1>Component Showcase: <code>&lt;mlv-button&gt;</code></h1>
         
-        <h2>Form Elements</h2>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name">
-            
-            <label for="options">Choose an option</label>
-            <select name="options" id="options">
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-            </select>
+        <div class="component-section">
+            <h2>Standard Button</h2>
+            <div class="component-group">
+                <mlv-button>Standard</mlv-button>
+            </div>
+        </div>
 
-            <button type="button">Default Button</button>
-        </form>
+        <div class="component-section">
+            <h2>Status Variants</h2>
+            <div class="component-group">
+                <mlv-button status="success">Success</mlv-button>
+                <mlv-button status="alert">Alert</mlv-button>
+                <mlv-button status="danger">Danger</mlv-button>
+            </div>
+        </div>
+
+        <div class="component-section">
+            <h2>Disabled State</h2>
+            <div class="component-group">
+                <mlv-button disabled>Disabled</mlv-button>
+            </div>
+        </div>
+
     </main>
     
-    <script src="src/main.js"></script>
+    <script type="module" src="src/main.js"></script>
 </body>
 </html>

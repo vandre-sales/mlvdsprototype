@@ -1,20 +1,51 @@
 :root {
-  /* Colors */
-  --mlv-color-primary: #005fcc;
-  --mlv-color-primary-hover: #004a9e;
-  --mlv-color-text: #333333;
-  --mlv-color-background: #ffffff;
-  --mlv-color-border: #cccccc;
+  /* ------------------------- */
+  /*   1. BRAND COLORS         */
+  /* ------------------------- */
+  --mlv-color-brand-standard: #4b9cd6;
+  --mlv-color-brand-enterprise: #1a4f75;
+  --mlv-color-brand-dark: #081521;
+  --mlv-color-brand-light: #dbebf6;
 
-  /* Typography */
-  --mlv-font-family-base: sans-serif;
-  --mlv-font-size-base: 1rem;
+  /* ------------------------- */
+  /*   2. UI COLORS            */
+  /* ------------------------- */
+  --mlv-color-ui-background: #112d47;
+  --mlv-color-ui-text-primary: #dbebf6;
+  --mlv-color-ui-text-headings: #4b9cd6;
+  --mlv-color-ui-white: #ffffff;
+  --mlv-color-ui-black: #000000;
 
-  /* Spacing */
-  --mlv-spacing-small: 0.5rem;
-  --mlv-spacing-medium: 1rem;
-  --mlv-spacing-large: 1.5rem;
+  /* ------------------------- */
+  /*   3. STATUS COLORS        */
+  /* ------------------------- */
+  --mlv-color-status-success: #2eb23c;
+  --mlv-color-status-alert: #f4ac45;
+  --mlv-color-status-danger: #eb5757;
 
-  /* Borders */
-  --mlv-border-radius-medium: 0.5rem;
+  /* ------------------------- */
+  /*   4. TYPOGRAPHY           */
+  /* ------------------------- */
+  /* Font Families */
+  --mlv-font-family-headings: 'Varela Round', sans-serif;
+  --mlv-font-family-body: 'Montserrat', sans-serif;
+
+  /* Font Weights */
+  --mlv-font-weight-light: 300;
+  --mlv-font-weight-medium: 500;
+  --mlv-font-weight-semibold: 600;
+
+  /* Font Sizes */
+  --mlv-font-size-h1: 40px;
+  --mlv-font-size-h2: 36px;
+  --mlv-font-size-h3: 30px;
+  --mlv-font-size-h4: 24px;
+  --mlv-font-size-h5: 20px;
+  --mlv-font-size-h6: 16px;
+  --mlv-font-size-body: 15px;
+
+  /* ------------------------- */
+  /*   5. BORDERS & RADII      */
+  /* ------------------------- */
+  --mlv-border-radius-medium: 8px;
 }

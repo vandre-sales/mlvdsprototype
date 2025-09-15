@@ -1,2 +1,6 @@
 // MLVDS main entry point
-console.log("MLVDS Initialized");
+
+// Import components
+import './components/mlv-button.js';
+
+console.log("MLVDS Initialized and components loaded.");

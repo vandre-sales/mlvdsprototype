@@ -10,11 +10,11 @@
 }
 
 body {
-  font-family: var(--mlv-font-family-base);
-  line-height: 1.5;
+  font-family: var(--mlv-font-family-body);
+  line-height: 1.4;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--mlv-color-background);
-  color: var(--mlv-color-text);
+  background-color: var(--mlv-color-ui-background);
+  color: var(--mlv-color-ui-text-primary);
 }
 
 img, picture, video, canvas, svg {
