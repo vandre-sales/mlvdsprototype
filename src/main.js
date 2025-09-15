@@ -2,5 +2,21 @@
 
 // Import components
 import './components/mlv-button.js';
+import './components/mlv-header.js';
+import './components/mlv-footer.js';
+import './components/mlv-tabs.js';
+
+// --- Version Display ---
+// This script reads the version from the meta tag and displays it on the page.
+document.addEventListener('DOMContentLoaded', () => {
+    const versionMeta = document.querySelector('meta[name="mlvds-version"]');
+    const versionDisplay = document.getElementById('version-display');
+
+    if (versionMeta && versionDisplay) {
+        const version = versionMeta.getAttribute('content');
+        versionDisplay.textContent = `v${version}`;
+    }
+});
+
 
 console.log("MLVDS Initialized and components loaded.");

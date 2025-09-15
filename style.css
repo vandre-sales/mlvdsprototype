@@ -1,31 +1,161 @@
 @import url('src/tokens.css');
 
-/* CSS Reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* ------------------------- */
+/*   1. GLOBAL STYLES        */
+/* ------------------------- */
+body {
+  background-color: var(--mlv-color-ui-background);
+  font-family: var(--mlv-font-family-body);
+  font-weight: var(--mlv-font-weight-light);
+  font-size: var(--mlv-font-size-body);
+  color: var(--mlv-color-ui-text-primary);
+  line-height: 1.4em;
   margin: 0;
   padding: 0;
 }
 
-body {
+h1, h2, h3, h4, h5, h6 {
+  color: var(--mlv-color-ui-text-headings);
+  line-height: 1.2em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+}
+
+h1 {
+  font-family: var(--mlv-font-family-headings);
+  font-weight: var(--mlv-font-weight-medium);
+  font-size: var(--mlv-font-size-h1);
+}
+
+h2 {
   font-family: var(--mlv-font-family-body);
-  line-height: 1.4;
-  -webkit-font-smoothing: antialiased;
-  background-color: var(--mlv-color-ui-background);
-  color: var(--mlv-color-ui-text-primary);
+  font-weight: var(--mlv-font-weight-medium);
+  font-size: var(--mlv-font-size-h2);
 }
 
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
+h3 {
+  font-family: var(--mlv-font-family-headings);
+  font-weight: var(--mlv-font-weight-medium);
+  font-size: var(--mlv-font-size-h3);
 }
 
-input, button, textarea, select {
-  font: inherit;
+h4 {
+  font-family: var(--mlv-font-family-headings);
+  font-weight: var(--mlv-font-weight-medium);
+  font-size: var(--mlv-font-size-h4);
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
+h5 {
+  font-family: var(--mlv-font-family-headings);
+  font-weight: var(--mlv-font-weight-medium);
+  font-size: var(--mlv-font-size-h5);
+}
+
+h6 {
+  font-family: var(--mlv-font-family-headings);
+  font-weight: var(--mlv-font-weight-medium);
+  font-size: var(--mlv-font-size-h6);
+}
+
+p {
+    max-width: 65ch; /* Improve readability */
+}
+
+strong, b {
+    font-weight: var(--mlv-font-weight-semibold);
+}
+
+/* ------------------------- */
+/*   2. SHOWROOM LAYOUT      */
+/* ------------------------- */
+.showroom-header {
+    text-align: center;
+    padding: 4rem 2rem;
+    border-bottom: 1px solid var(--mlv-color-brand-enterprise);
+    position: relative; /* Needed for positioning the version display */
+}
+
+#version-display {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 1rem;
+    font-size: 0.8em;
+    font-family: monospace;
+    color: var(--mlv-color-brand-light);
+    opacity: 0.5;
+    background-color: var(--mlv-color-brand-enterprise);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.showroom-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    gap: 3rem; /* Increased gap for better category separation */
+}
+
+.category-section {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.category-title {
+    font-size: var(--mlv-font-size-h3);
+    border-bottom: 2px solid var(--mlv-color-brand-enterprise);
+    padding-bottom: 0.5rem;
+    margin: 0;
+}
+
+.component-card {
+    background-color: var(--mlv-color-brand-dark);
+    border: 1px solid var(--mlv-color-brand-enterprise);
+    border-radius: var(--mlv-border-radius-medium);
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 1.5rem;
+    background-color: rgba(0,0,0,0.2);
+    border-bottom: 1px solid var(--mlv-color-brand-enterprise);
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: var(--mlv-font-size-h4);
+}
+
+.card-header p {
+    margin: 0.25rem 0 0;
+    font-size: var(--mlv-font-size-body);
+    color: var(--mlv-color-brand-light);
+    opacity: 0.8;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.variant-group {
+    margin-bottom: 2rem;
+}
+
+.variant-group:last-child {
+    margin-bottom: 0;
+}
+
+.variant-title {
+    font-weight: var(--mlv-font-weight-medium);
+    color: var(--mlv-color-ui-text-headings);
+    border-bottom: 1px solid var(--mlv-color-brand-enterprise);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.component-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
 }
