@@ -1,12 +1,15 @@
-# Meliva.ai Design System Blueprint
+# Blueprint do Projeto: MLVDS (Meliva Design System)
 
 ## Visão Geral
 
-Este documento serve como a fonte da verdade para o Design System da Meliva.ai. O objetivo é refatorar um protótipo HTML estático para uma arquitetura modular e reutilizável baseada em Web Components.
+Este documento é a **fonte da verdade imutável** para a construção do MLVDS. Nosso objetivo é criar um Design System robusto, acessível e performático, utilizando uma **arquitetura híbrida** baseada em tecnologias web nativas (HTML, CSS, JavaScript), sem dependência de frameworks de UI ou JS.
 
-A estratégia central se baseia na distinção clara entre dois arquivos principais:
-- **`index.html`**: O protótipo visual original. **Este arquivo é uma referência estática e imutável.** Ele serve como "fonte da verdade" para o design e a estrutura que devemos alcançar.
-- **`design-system.html`**: A nossa tela de implementação. **É neste arquivo que a refatoração acontece.** Nós substituímos progressivamente o HTML estático por Web Components modulares.
+A estratégia central é:
+
+1.  **Fundação Principal (`wcag-ui`):** Utilizaremos o `wcag-ui` como a camada de base. Sua arquitetura, focada em HTML semântico e conformidade com as diretrizes WCAG, nos fornece um ponto de partida resiliente, acessível e de baixo risco.
+2.  **Módulos Especializados:** Para componentes complexos, integraremos as melhores micro-bibliotecas "vanilla" de propósito único. Nossos Web Components irão encapsular e estender essas bibliotecas para garantir uma experiência de usuário superior e consistência com nosso Design System.
+
+Este blueprint guiará o Agente de IA (Gemini) na construção deste sistema, garantindo que todas as decisões técnicas e de implementação estejam alinhadas com esta visão.
 
 ---
 
@@ -21,74 +24,84 @@ Nossa colaboração se baseia em uma clara divisão de papéis para maximizar a 
     *   **Responsabilidades:**
         *   Definir os objetivos e os requisitos de cada etapa.
         *   Tomar as decisões finais sobre a direção do design e da funcionalidade.
-        *   Iniciar os ciclos de trabalho e auditoria.
         *   Validar as entregas e garantir que estão alinhadas com a visão do produto.
 
 *   **Eu - Programador AI (O Executor):**
-    *   **Função:** Eu sou a ferramenta de implementação e análise técnica, responsável por traduzir a visão estratégica em código funcional, limpo e performático. Eu converso com você sempre em português brasileiro, mas codifico em inglês padrão seguindo as boas práticas de desenvolvimento. 
+    *   **Função:** Eu sou a ferramenta de implementação e análise técnica, responsável por traduzir a visão estratégica em código funcional, limpo e performático. Eu converso com você sempre em português brasileiro, mas codifico em inglês padrão seguindo as boas práticas de desenvolvimento.
     *   **Responsabilidades:**
         *   Executar as tarefas de codificação (criação, leitura, deleção de arquivos) conforme ordenado.
         *   Nunca atualizar um arquivo diretamente devido a bugs de plataforma.
         *   Sempre seguir o protocolo de contingência manual para atualizações.
-        *   Manter a documentação (`blueprint.md`, `CHANGELOG.md` e `roadmap.md`) atualizada através do protocolo manual.
+        *   Manter a documentação sob minha gestão (`blueprint.md` e `CHANGELOG.md`) atualizada através do protocolo manual.
 
 ### 2. O Protocolo "Audit": Um Passo a Passo Detalhado
 
 O comando **"Audit"** é a nossa cerimônia oficial para sincronização e verificação.
 
-*   **Fase I (Análise):** Eu leio os seguintes arquivos para construir um relatório de consistência:
-    1.  **`blueprint.md`**: Para entender as regras e o escopo.
-    2.  **`design-system-best-practices.md`**: Para entender nossa filosofia para trabalhar neste projeto.
-    3.  **`/components`**: Para listar os componentes existentes.
-    4.  **`main.js`**: Para verificar se os componentes estão sendo registrados.
-    5.  **`design-system.html`**: Para verificar se os componentes registrados estão sendo **corretamente utilizados na implementação**.
-    6.  **`index.html`**: Como referência visual estática.
-    7.  **`roadmap.md`**: para sincronizar o status do desenvolvimento.
-    -   Eu gero uma árvore com todas as pastas e arquivos do projeto.
-*   **Fase II (Documentação):** Eu leio o `CHANGELOG.md` e gero o texto para uma nova entrada de log. Você fará a atualização manual. **A estrutura do relatório no CHANGELOG.md deve seguir obrigatoriamente a estrutura que o arquivo mostra na sessão '[0.0.0] - Template de Versão - YYYY-MM-DD' :**
-*   **Fase III (Comunicação):** Eu apresento um resumo do relatório e o checklist visual (✅, 🟡, 🔲).
-    - Eu imprimo na tela o texto da nova versão do arquivo 'roadmap.md' para garantir a sincronia do roadmap de desenvolvimento. Neste arquivo eu incluo a árvore de pastas e arquivos atuais.
-    - Eu aguardo a sua atualização manual no arquivo para seguirmos adiante. 
-
-### 3. Protocolo de Verificação "Confiança Zero" (Anti-Falha)
-
-Este protocolo governa todas as minhas operações com o sistema de arquivos.
-
-*   **Causa do Problema:** Existe uma latência de sincronização entre as operações de escrita na memória e a consolidação no disco. Uma leitura imediata após uma escrita pode retornar dados obsoletos. Além disso, a capacidade de **Update** de arquivos é comprovadamente não confiável.
-*   **Nosso Mecanismo de Defesa:**
-    1.  **Operações Permitidas:** Eu só posso executar `Create`, `Read`, e `Delete` de arquivos. A operação de `Update` está proibida.
-    2.  **Protocolo de Leitura Confiável:** Sempre que eu ler um arquivo, irei imprimir seu conteúdo completo em um bloco de código no chat para sua verificação.
-    3.  **Protocolo de Atualização Manual:** Para atualizar um arquivo, eu vou primeiro ler o conteúdo atual, gerar o novo conteúdo completo, e apresentá-lo a você no chat. Você, como Arquiteto, fará a atualização manual no arquivo.
-    4.  **Pausa de Sincronização:** Após qualquer operação de `Create` ou `Delete`, vou respeitar uma pausa de **5 segundos** antes de tentar qualquer operação de `Read` subsequente para permitir que o sistema de arquivos sincronize.
+1.  **Sua Solicitação:** Você inicia o processo com o comando "Audit".
+2.  **Minha Análise:** Eu realizo uma varredura completa do projeto, analisando:
+    *   **Estrutura de Arquivos:** Verifico se a organização está lógica e limpa.
+    *   **Conteúdo dos Arquivos:** Leio os arquivos relevantes para entender o estado atual do código e da documentação.
+    *   **Documentação Estratégica:** Releio o `blueprint.md`, `roadmap.md` e `design-system-best-practices.md` para realinhar com nossos objetivos.
+3.  **Geração do Relatório:** Eu apresento um relatório claro e conciso contendo:
+    *   **"O Que Eu Vejo":** Uma descrição objetiva do estado atual do projeto.
+    *   **"O Que Devemos Fazer":** Um plano de ação detalhado, incluindo limpeza, refatoração, criação ou modificação de arquivos, sempre justificando cada passo com base em nossos princípios.
+4.  **Sua Aprovação:** Você revisa o plano e dá o sinal verde. Nenhuma ação de modificação é tomada sem a sua aprovação explícita.
+5.  **Execução:** Após a aprovação, eu executo o plano passo a passo.
 
 Este protocolo garante que nosso fluxo de trabalho seja resiliente, consistente e auditável.
 
 ---
 
-## Arquitetura e Funcionalidades Implementadas
+### 3. Gestão de Documentos
 
-A arquitetura final será baseada nos seguintes princípios:
+Para garantir clareza e organização, nossos documentos principais têm papéis bem definidos:
 
-*   **Modularidade**: Cada elemento da UI será um Web Component independente.
-*   **Encapsulamento**: O Shadow DOM será usado para isolar estilos e comportamento.
-*   **Reutilização**: Os componentes serão facilmente importáveis.
-*   **Design Tokens**: As variáveis CSS em `style.css` são a nossa fonte única da verdade para estilos.
-*   **Resiliência de Código**: Os códigos em css, html e js serão gerados sempre garantindo a retrocompatibilidade com todas as plataformas, evitando conflitos com frameworks tais como Tailwind, Bootstrap, Foundation e equivalentes.
+*   **Documentos "Constitucionais" (Raramente alterados):**
+    *   **`blueprint.md`**: É a nossa "Constituição". Define os princípios, papéis e protocolos imutáveis do projeto. Só pode ser alterado com consentimento mútuo após uma discussão estratégica.
+    *   **`docs/design-system-best-practices.md`**: É a nossa "Biblioteca de Referência". Um guia de consulta com as melhores práticas que fundamentam nossas decisões.
 
-## Plano de Refatoração (Checklist)
+*   **Documentos "Dinâmicos" (Constantemente atualizados):**
+    *   **`docs/roadmap.md`**: É o nosso "Plano de Voo". Um documento vivo, **gerenciado exclusivamente pelo Arquiteto de UX (Vandré)**, que detalha as fases, tarefas e prioridades do projeto.
+    *   **`CHANGELOG.md`**: O diário de bordo técnico. É atualizado por mim a cada entrega de funcionalidade ou correção.
 
-*   [✅] Estrutura e Fundações
-*   [✅] Componentização da UI (Typography, Layout, Color, Iconography, Feedback, Tabs, Loaders, Cards, Badges)
-*   [🟡] Refatoração do Header para Web Component (Componente criado, mas não implementado)
-*   [🔲] **(Próximo)** Implementar o `<page-header>` no `design-system.html`.
-*   [🔲] Refatorar a seção **"Data Tables"**.
-*   [🔲] Refatorar a seção **"Modals & Pop-ups"**.
-*   [🔲] Refatorar a seção **"Buttons"**.
-*   ... e assim por diante.
+---
 
-## Base de conhecimento e priorização
+## Arquitetura e Princípios
 
-Fontes da Verdade absoluta:
-- docs/design-system-best-practices.md;
-- docs/typography.md;
-> Se algum conflito lógico ou conceitual surgir, as informações desses documentos prevalecem sobre outors fatos.
+A arquitetura final será baseada nos seguintes princípios não negociáveis, em ordem de prioridade:
+
+1.  **Arquitetura Híbrida (Fundação e Módulos):**
+    *   **Fundação com `wcag-ui`**: Toda a estilização base e as melhores práticas de acessibilidade para elementos HTML nativos **devem** partir do `wcag-ui`. Nossos componentes customizados irão estender e respeitar essa base, nunca contradizê-la.
+    *   **Módulos Especializados para Componentes Complexos**: Para evitar reinventar soluções para problemas complexos, integraremos bibliotecas de ponta, "vanilla" e com licenças permissivas. As bibliotecas já aprovadas para esta arquitetura são:
+        *   **Data Grids com `Tabulator`**: Para a criação de tabelas e grids de dados, a biblioteca oficial é o `Tabulator`. A escolha se baseia em seu conjunto extenso de funcionalidades (edição, agrupamento, etc.), documentação clara, forte foco em acessibilidade (tags ARIA) e licença MIT.
+
+2.  **Acessibilidade (A11Y) como Prioridade Zero:**
+    *   Os componentes devem seguir as diretrizes do **WCAG 2.2 (Nível AA)**. A conformidade com o `wcag-ui` é o primeiro passo para garantir isso.
+
+3.  **Independência de Frameworks:**
+    *   Utilizaremos exclusivamente **HTML, CSS e JavaScript puros (Vanilla)**. O sistema deve ser consumível em qualquer projeto.
+
+4.  **Web Components como Padrão:**
+    *   Todos os componentes de UI serão construídos como **Web Components** para garantir encapsulamento e prevenir conflitos.
+
+5.  **Performance em Primeiro Lugar:**
+    *   O código será otimizado para ser leve. A escolha de bibliotecas especializadas deve levar em conta o impacto no desempenho.
+
+6.  **Design Tokens para Theming:**
+    *   A camada de personalização visual (cores, fontes, etc.) será gerenciada através de **CSS Custom Properties (Variáveis CSS)**, aplicadas sobre a fundação do `wcag-ui`.
+
+7.  **Modernidade "Baseline":**
+    *   Adotaremos recursos modernos de CSS e JavaScript que sejam amplamente suportados pelos navegadores atuais.
+
+---
+
+## Base de Conhecimento e Priorização
+
+Fontes da Verdade absoluta (em ordem de precedência):
+
+1.  **`blueprint.md`**: Este documento.
+2.  **Diretrizes WCAG 2.2 (Nível AA)**: O padrão de conformidade para todas as decisões de acessibilidade.
+3.  **Documentação Oficial das Bibliotecas Integradas**: Como referência técnica de implementação.
+
+> Se algum conflito lógico ou conceitual surgir, as informações desses documentos prevalecem sobre outros fatos, seguindo a ordem de prioridade listada.
