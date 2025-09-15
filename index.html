@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MLVDS</title>
+    <link rel="stylesheet" href="https://unpkg.com/wcag-ui@latest/style.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main style="padding: 2rem;">
+        <h1>MLVDS Foundation Test</h1>
+        <p>These elements are styled by the <strong>wcag-ui</strong> foundation.</p>
+        
+        <h2>Form Elements</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+            
+            <label for="options">Choose an option</label>
+            <select name="options" id="options">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+            </select>
+
+            <button type="button">Default Button</button>
+        </form>
+    </main>
     
     <script src="src/main.js"></script>
 </body>

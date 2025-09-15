@@ -42,7 +42,7 @@ O comando **"Audit"** é a nossa cerimônia oficial para sincronização e verif
 2.  **Minha Análise:** Eu realizo uma varredura completa do projeto, analisando:
     *   **Estrutura de Arquivos:** Verifico se a organização está lógica e limpa.
     *   **Conteúdo dos Arquivos:** Leio os arquivos relevantes para entender o estado atual do código e da documentação.
-    *   **Documentação Estratégica:** Releio o `blueprint.md`, `roadmap.md` e `design-system-best-practices.md` para realinhar com nossos objetivos.
+    *   **Documentação Estratégica:** Releio o `blueprint.md`, `roadmap.md`, `design-system-best-practices.md` e, crucialmente, o `design/meliva-ds.md` para realinhar com nossos objetivos e especificações visuais.
 3.  **Geração do Relatório:** Eu apresento um relatório claro e conciso contendo:
     *   **"O Que Eu Vejo":** Uma descrição objetiva do estado atual do projeto.
     *   **"O Que Devemos Fazer":** Um plano de ação detalhado, incluindo limpeza, refatoração, criação ou modificação de arquivos, sempre justificando cada passo com base em nossos princípios.
@@ -60,6 +60,9 @@ Para garantir clareza e organização, nossos documentos principais têm papéis
 *   **Documentos "Constitucionais" (Raramente alterados):**
     *   **`blueprint.md`**: É a nossa "Constituição". Define os princípios, papéis e protocolos imutáveis do projeto. Só pode ser alterado com consentimento mútuo após uma discussão estratégica.
     *   **`docs/design-system-best-practices.md`**: É a nossa "Biblioteca de Referência". Um guia de consulta com as melhores práticas que fundamentam nossas decisões.
+  
+*   **Documento de Especificação Visual (A Fonte da Verdade do Design):**
+    *   **`design/meliva-ds.md`**: Contém a especificação visual oficial do Design System da Meliva (cores, tipografia, tokens). **Este documento dita a implementação visual** e é gerenciado pelo Arquiteto de UX.
 
 *   **Documentos "Dinâmicos" (Constantemente atualizados):**
     *   **`docs/roadmap.md`**: É o nosso "Plano de Voo". Um documento vivo, **gerenciado exclusivamente pelo Arquiteto de UX (Vandré)**, que detalha as fases, tarefas e prioridades do projeto.
@@ -101,7 +104,8 @@ A arquitetura final será baseada nos seguintes princípios não negociáveis, e
 Fontes da Verdade absoluta (em ordem de precedência):
 
 1.  **`blueprint.md`**: Este documento.
-2.  **Diretrizes WCAG 2.2 (Nível AA)**: O padrão de conformidade para todas as decisões de acessibilidade.
-3.  **Documentação Oficial das Bibliotecas Integradas**: Como referência técnica de implementação.
+2.  **`design/meliva-ds.md`**: A especificação visual oficial. O código **deve** refletir o que está definido aqui.
+3.  **Diretrizes WCAG 2.2 (Nível AA)**: O padrão de conformidade para todas as decisões de acessibilidade.
+4.  **Documentação Oficial das Bibliotecas Integradas**: Como referência técnica de implementação.
 
 > Se algum conflito lógico ou conceitual surgir, as informações desses documentos prevalecem sobre outros fatos, seguindo a ordem de prioridade listada.

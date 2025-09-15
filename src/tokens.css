@@ -1,0 +1,20 @@
+:root {
+  /* Colors */
+  --mlv-color-primary: #005fcc;
+  --mlv-color-primary-hover: #004a9e;
+  --mlv-color-text: #333333;
+  --mlv-color-background: #ffffff;
+  --mlv-color-border: #cccccc;
+
+  /* Typography */
+  --mlv-font-family-base: sans-serif;
+  --mlv-font-size-base: 1rem;
+
+  /* Spacing */
+  --mlv-spacing-small: 0.5rem;
+  --mlv-spacing-medium: 1rem;
+  --mlv-spacing-large: 1.5rem;
+
+  /* Borders */
+  --mlv-border-radius-medium: 0.5rem;
+}
