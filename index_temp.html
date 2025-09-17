@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="mlvds-version" content="0.6.0">
+    <meta name="mlvds-version" content="0.9.0">
     <title>MLVDS Component Showroom</title>
     
     <!-- Google Fonts -->
@@ -17,11 +17,21 @@
 </head>
 <body>
 
+    <!-- Drawer Component -->
+    <mlv-drawer id="main-drawer">
+        <h3 style="color: var(--color-standard-blue);">Drawer Content</h3>
+        <p>This is the content inside the drawer. You can put any HTML here.</p>
+        <a href="#">A link</a>
+        <hr>
+        <mlv-button onclick="document.getElementById('main-drawer').close()">Close from inside</mlv-button>
+    </mlv-drawer>
+
     <!-- The mlv-header component in its natural position -->
     <mlv-header>
         <a href="#" slot="nav-items">Home</a>
         <a href="#" slot="nav-items">Components</a>
         <a href="#" slot="nav-items">About</a>
+        <mlv-button id="open-drawer-btn" slot="nav-items">Open Drawer</mlv-button>
     </mlv-header>
 
     <header class="showroom-header">
@@ -36,7 +46,6 @@
         <section class="category-section">
             <h2 class="category-title">2.1. Estrutura e Layout</h2>
             
-            <!-- mlv-header component showcase -->
             <div class="component-card">
                 <header class="card-header">
                     <h2>&lt;mlv-header&gt;</h2>
@@ -47,7 +56,6 @@
                 </div>
             </div>
 
-            <!-- mlv-footer component showcase -->
             <div class="component-card">
                 <header class="card-header">
                     <h2>&lt;mlv-footer&gt;</h2>
@@ -63,7 +71,6 @@
         <section class="category-section">
             <h2 class="category-title">2.2. Navegação</h2>
 
-            <!-- mlv-tabs component showcase -->
             <div class="component-card">
                 <header class="card-header">
                     <h2>&lt;mlv-tabs&gt;</h2>
@@ -86,13 +93,22 @@
                     </mlv-tabs>
                 </div>
             </div>
+            
+            <div class="component-card">
+                <header class="card-header">
+                    <h2>&lt;mlv-drawer&gt;</h2>
+                    <p>A side navigation panel that slides in.</p>
+                </header>
+                <div class="card-body">
+                    <p>A button to open the drawer has been added to the main header for demonstration.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Category: Actions and Interactions -->
         <section class="category-section">
             <h2 class="category-title">2.3. Ações e Interações</h2>
 
-            <!-- mlv-button component showcase -->
             <div class="component-card">
                 <header class="card-header">
                     <h2>&lt;mlv-button&gt;</h2>
@@ -117,6 +133,61 @@
                     </div>
                 </div>
             </div>
+
+            <div class="component-card">
+                <header class="card-header">
+                    <h2>&lt;mlv-pill&gt;</h2>
+                    <p>A toggleable pill for filters and selectors.</p>
+                </header>
+                <div class="card-body">
+                    <div class="variant-group">
+                        <p class="variant-title">Inactive State</p>
+                        <mlv-pill>Filter Option</mlv-pill>
+                    </div>
+                    <div class="variant-group">
+                        <p class="variant-title">Active State</p>
+                        <mlv-pill active>Filter Selected</mlv-pill>
+                    </div>
+                    <div class="variant-group">
+                        <p class="variant-title">Group Example</p>
+                        <div class="component-group">
+                           <mlv-pill active>Technology</mlv-pill>
+                           <mlv-pill>Marketing</mlv-pill>
+                           <mlv-pill>Sales</mlv-pill>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category: Content Display -->
+        <section class="category-section">
+            <h2 class="category-title">2.4. Exibição de Conteúdo</h2>
+
+            <div class="component-card">
+                <header class="card-header">
+                    <h2>&lt;mlv-card&gt;</h2>
+                    <p>A versatile container for content with header, body, and footer slots.</p>
+                </header>
+                <div class="card-body">
+                    <div class="variant-group">
+                        <p class="variant-title">Full Card Example</p>
+                        <mlv-card style="max-width: 400px;">
+                            <h4 slot="header">Card Title</h4>
+                            <p>This is the main body content of the card. It can contain any HTML, like text, images, or other components.</p>
+                            <div slot="footer" style="display: flex; justify-content: flex-end; gap: 8px;">
+                                <mlv-button>Read More</mlv-button>
+                            </div>
+                        </mlv-card>
+                    </div>
+                    <div class="variant-group">
+                        <p class="variant-title">Card with only Body</p>
+                        <mlv-card style="max-width: 400px;">
+                            <p>This card only has content in the default slot, so the header and footer areas are not rendered.</p>
+                        </mlv-card>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </main>
@@ -128,6 +199,17 @@
         <a href="#" slot="footer-links">Terms of Service</a>
         <a href="#" slot="footer-links">Privacy Policy</a>
     </mlv-footer>
+    
+    <script>
+        // Drawer Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const drawer = document.getElementById('main-drawer');
+            const openBtn = document.getElementById('open-drawer-btn');
+            openBtn.addEventListener('click', () => {
+                drawer.open();
+            });
+        });
+    </script>
 
 </body>
 </html>

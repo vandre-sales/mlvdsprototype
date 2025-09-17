@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.9.0] - 2024-08-02
+
+### Added
+- **`<mlv-card>` Web Component:** Created a versatile card component (`src/components/mlv-card.js`) with slots for `header`, default (body), and `footer` content.
+
+### Changed
+- **Showroom Evolution:** Added the "Exibição de Conteúdo" category to `index.html` and integrated the new `<mlv-card>` component, demonstrating its composition with different slots.
+
+## [0.8.0] - 2024-08-02
+
+### Added
+- **`<mlv-pill>` Web Component:** Created an accessible, toggleable pill component (`src/components/mlv-pill.js`) for use as filters or selectors. It supports an `active` state.
+
+### Changed
+- **Showroom Evolution:** Integrated the new `<mlv-pill>` component into `index.html` under the "Ações e Interações" category, with examples of its active and inactive states.
+
+## [0.7.0] - 2024-08-02
+
+### Added
+- **`<mlv-drawer>` Web Component:** Created an accessible side navigation drawer component (`src/components/mlv-drawer.js`). It can be opened, closed, and includes slots for content.
+
+### Changed
+- **Showroom Evolution:** Integrated the `<mlv-drawer>` component into `index.html`. Added a button to the `<mlv-header>` for demonstration purposes.
+
 ## [0.6.0] - 2024-08-02
 
 ### Added

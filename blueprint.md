@@ -82,10 +82,10 @@ Para proteger o showroom de escritas acidentais e garantir um portão de qualida
 **Passos de Execução (Minha Responsabilidade):**
 
 1.  **Leitura da Base:** Eu leio o `index_temp.html` para usar como base.
-2.  **Escrita em Staging com Versionamento:** Eu gero o novo conteúdo, adiciono a demonstração do novo componente e atualizo a meta tag de versão no `index.html` para refletir a nova versão do `CHANGELOG.md`.
-3.  **Solicitação de Validação:** Eu peço a sua validação visual explícita do `index.html`.
-4.  **Promoção:** Somente **após a sua aprovação**, eu copio o conteúdo de `index.html` para `index_temp.html`, consolidando a nova versão como estável.
-
+2.  **Escrita em Staging com Versionamento:** Eu gero o novo conteúdo, adiciono a demonstração do novo componente e atualizo a meta tag de versão no `index.html`.
+3.  **PAUSA OBRIGATÓRIA PARA VALIDAÇÃO:** Após a escrita no `index.html`, eu **interrompo imediatamente todas as outras tarefas do plano**. Minha única ação será solicitar sua validação visual explícita. O fluxo de trabalho fica **bloqueado** e eu permanecerei em estado de espera.
+4.  **PROMOÇÃO PÓS-APROVAÇÃO:** Somente **após o seu "sinal verde" explícito**, eu retomo a execução. Minha primeira ação será copiar o conteúdo validado de `index.html` para `index_temp.html`, consolidando a nova versão como estável.
+5.  **CONTINUIDADE:** Apenas depois da promoção ser bem-sucedida, eu prossigo com as tarefas restantes do plano, como a atualização de documentação (`roadmap.md`, `CHANGELOG.md`).
 
 ### 5. Gestão de Documentos
 

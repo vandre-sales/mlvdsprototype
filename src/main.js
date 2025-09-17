@@ -5,6 +5,9 @@ import './components/mlv-button.js';
 import './components/mlv-header.js';
 import './components/mlv-footer.js';
 import './components/mlv-tabs.js';
+import './components/mlv-drawer.js';
+import './components/mlv-pill.js';
+import './components/mlv-card.js';
 
 // --- Version Display ---
 // This script reads the version from the meta tag and displays it on the page.

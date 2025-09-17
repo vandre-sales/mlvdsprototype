@@ -45,21 +45,21 @@ O `index.html` (nosso showroom) evoluirá a cada item concluído, tornando-se um
 | Tarefa | Status |
 | :--- | :--- |
 | **2.2.1.** Criar Web Component: `<mlv-tabs>` | ✅ Concluído |
-| **2.2.2.** Criar Web Component: `<mlv-drawer>` | 🔲 Próximo |
+| **2.2.2.** Criar Web Component: `<mlv-drawer>` | ✅ Concluído |
 
 ### 2.3. Ações e Interações
 
 | Tarefa | Status |
 | :--- | :--- |
 | **2.3.1.** Criar Web Component: `<mlv-button>` | ✅ Concluído |
-| **2.3.2.** Criar Web Component: `<mlv-pill>` | 💡 Backlog |
+| **2.3.2.** Criar Web Component: `<mlv-pill>` | ✅ Concluído |
 
 ### 2.4. Exibição de Conteúdo
 
 | Tarefa | Status |
 | :--- | :--- |
-| **2.4.1.** Criar Web Component: `<mlv-card>` | 💡 Backlog |
-| **2.4.2.** Criar Web Component: `<mlv-badge>` & `<mlv-tag>` | 💡 Backlog |
+| **2.4.1.** Criar Web Component: `<mlv-card>` | ✅ Concluído |
+| **2.4.2.** Criar Web Component: `<mlv-badge>` & `<mlv-tag>` | 🔲 Próximo |
 | **2.4.3.** Integração: Tabela de Dados (`Tabulator`) | 💡 Backlog |
 
 ### 2.5. Feedback de Usuário
